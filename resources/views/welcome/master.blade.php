@@ -1,3 +1,11 @@
+{{--
+  master.blade.php
+
+  Eximius
+  Alexander Rhett Crammer
+  Advanced Server-Side Languages
+  Created Tuesday, 24 Nov. 2015
+--}}
 <!DOCTYPE html>
 <html>
   <head>
