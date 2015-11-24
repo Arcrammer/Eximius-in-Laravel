@@ -8,6 +8,88 @@
  * Created Tuesday, 24 Nov. 2015
  */
 
+/* Variables */
+$helvetica-stack: "Helvetica Neue", "Helvetica", sans-serif;
+
+/* Mixins */
+@mixin helvetica-thin {
+  font: {
+    family: $helvetica-stack;
+    weight: 200;
+  }
+  letter-spacing: 0.35px;
+}
+
+@mixin golden-text {
+  // Gradient overlay
+  background: -webkit-linear-gradient(top,  rgba(212,175,55,1) 0%,rgba(201,167,58,1) 100%); /* Chrome10-25,Safari5.1-6 */
+
+  // Clipping the gradient to the text
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Structure */
 body {
   background-color: black;
+}
+
+/* Navigation */
+nav li {
+  background-color: aqua;
+  display: inline;
+}
+
+nav li:nth-of-type(-n+2) {
+  float: left;
+}
+
+nav li:nth-last-of-type(-n+2) {
+  float: right;
+}
+
+nav div.logo {
+  text-align: center;
+}
+
+nav div.logo a {
+  @include golden-text;
+  font: {
+    family: "Bauru";
+    size: 4em;
+  }
+  letter-spacing: 5px;
+  line-height: 250%;
+}
+
+nav a,
+nav a:link,
+nav a:visited, {
+  @include helvetica-thin;
+  color: #d4bb6c;
+  text: {
+    decoration: none;
+    transform: uppercase;
+  }
+  transition: color 125ms;
+}
+
+nav a:hover {
+  color: #e2e2e2;
+  font-style: italic;
+}
+
+nav a:active {
+  color: #7b7b7b;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Bauru";
+  src: url('/assets/fonts/bauru.eot');
+  src: url('/assets/fonts/bauru.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/bauru.woff2') format('woff2'),
+       url('/assets/fonts/bauru.woff') format('woff'),
+       url('/assets/fonts/bauru.ttf') format('truetype'),
+       url('/assets/fonts/bauru.svg#baururegular') format('svg');
 }

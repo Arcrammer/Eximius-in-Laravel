@@ -142,5 +142,56 @@ table {
  * Full Sail University
  * Created Tuesday, 24 Nov. 2015
  */
+/* Variables */
+/* Mixins */
+/* Structure */
 body {
   background-color: black; }
+
+/* Navigation */
+nav li {
+  background-color: aqua;
+  display: inline; }
+
+nav li:nth-of-type(-n+2) {
+  float: left; }
+
+nav li:nth-last-of-type(-n+2) {
+  float: right; }
+
+nav div.logo {
+  text-align: center; }
+
+nav div.logo a {
+  background: -webkit-linear-gradient(top, #d4af37 0%, #c9a73a 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Bauru";
+  font-size: 4em;
+  letter-spacing: 5px;
+  line-height: 250%; }
+
+nav a,
+nav a:link,
+nav a:visited {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.35px;
+  color: #d4bb6c;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 125ms; }
+
+nav a:hover {
+  color: #e2e2e2;
+  font-style: italic; }
+
+nav a:active {
+  color: #7b7b7b; }
+
+/* Fonts */
+@font-face {
+  font-family: "Bauru";
+  src: url("/assets/fonts/bauru.eot");
+  src: url("/assets/fonts/bauru.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/bauru.woff2") format("woff2"), url("/assets/fonts/bauru.woff") format("woff"), url("/assets/fonts/bauru.ttf") format("truetype"), url("/assets/fonts/bauru.svg#baururegular") format("svg"); }
