@@ -18,14 +18,20 @@
   </head>
   <body>
     <nav>
-      <div class="logo">
+      <!-- <div class="logo">
         <a href="/">Eximius</a>
       </div> <!-- .logo -->
       <ul>
         <li><a href="/">Welcome</a></li>
-        <li><a href="/what-we-do/">What we Do</a></li>
+        <li><a href="/what-we-do/">Our Work</a></li>
+      </ul>
+      <div class="logo">
+        <a href="/">Eximius</a>
+      </div> <!-- .logo -->
+      <ul>
         <li><a href="/listings">Listings</a></li>
         <li><a href="/register">Sign Up</a></li>
+      </ul>
       </ul>
     </nav>
     <div class="container">

@@ -17,12 +17,11 @@ $helvetica-stack: "Helvetica Neue", "Helvetica", sans-serif;
     family: $helvetica-stack;
     weight: 200;
   }
-  letter-spacing: 0.35px;
 }
 
 @mixin golden-text {
   // Gradient overlay
-  background: -webkit-linear-gradient(top,  rgba(212,175,55,1) 0%,rgba(201,167,58,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(top,  rgba(212,175,55,1) 0%,rgba(201,167,58,1) 100%); /* Chrome 10-25, Safari 5.1-6 */
 
   // Clipping the gradient to the text
   -webkit-background-clip: text;
@@ -35,31 +34,49 @@ body {
 }
 
 /* Navigation */
-nav li {
-  background-color: aqua;
-  display: inline;
+nav {
+  overflow: auto;
+  text-align: center;
+  width: 100%;
 }
 
-nav li:nth-of-type(-n+2) {
+nav ul:first-of-type li {
   float: left;
+  margin-left: 35px;
 }
 
-nav li:nth-last-of-type(-n+2) {
+nav ul:last-of-type li {
   float: right;
+  margin-right: 35px;
+}
+
+nav li {
+  display: inline;
+  font-size: 0.75em;
+  padding: 50px 0;
 }
 
 nav div.logo {
-  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 2.5px;
+  left: 335px;
+  right: 335px;
 }
 
 nav div.logo a {
   @include golden-text;
+  display: block;
   font: {
     family: "Bauru";
     size: 4em;
   }
-  letter-spacing: 5px;
-  line-height: 250%;
+  line-height: 172.5%;
+  padding: 0;
+}
+
+nav div.logo a:hover {
+  font-style: normal;
 }
 
 nav a,
@@ -67,6 +84,8 @@ nav a:link,
 nav a:visited, {
   @include helvetica-thin;
   color: #d4bb6c;
+  letter-spacing: 1.75px;
+  padding: 50px 25px;
   text: {
     decoration: none;
     transform: uppercase;
@@ -75,7 +94,7 @@ nav a:visited, {
 }
 
 nav a:hover {
-  color: #e2e2e2;
+  color: #efdca0;
   font-style: italic;
 }
 
