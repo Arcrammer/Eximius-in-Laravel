@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+elixir.config.sourcemaps = false;
 
 /*
  |--------------------------------------------------------------------------
@@ -12,5 +13,11 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass('Main.scss', 'resources/assets/css/Welcome.css')
+      .styles([
+        'Reset.css',
+        'Welcome.css'
+      ], 'public/assets/css/Welcome.css');
+
+    mix.version('assets/css/Welcome.css');
 });
