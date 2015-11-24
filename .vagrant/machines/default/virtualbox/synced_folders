@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/eximius-in-laravel":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/eximius-in-laravel","hostpath":"/Users/alexander/Sites/Eximius-in-Laravel","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/alexander/Sites/Eximius-in-Laravel","disabled":false}}}
