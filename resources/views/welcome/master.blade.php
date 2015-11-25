@@ -26,9 +26,6 @@
   </head>
   <body>
     <nav>
-      <!-- <div class="logo">
-        <a href="/">Eximius</a>
-      </div> <!-- .logo -->
       <ul>
         <li><a href="/">Welcome</a></li>
         <li><a href="/what-we-do/">Our Work</a></li>

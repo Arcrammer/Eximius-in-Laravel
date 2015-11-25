@@ -13,7 +13,11 @@ elixir.config.sourcemaps = false;
  */
 
 elixir(function(mix) {
-    mix.sass('Main.scss', 'resources/assets/css/Welcome.css')
+    mix.sass([
+      'Main.scss',
+      'Hover.scss',
+      'Welcome.scss'
+    ], 'resources/assets/css/Welcome.css')
       .styles([
         'Reset.css',
         'Welcome.css'

@@ -12,6 +12,9 @@
 $helvetica-stack: "Helvetica Neue", "Helvetica", sans-serif;
 $bebas-stack: "Bebas Neue", $helvetica-stack;
 
+/* Colours */
+$gold: #d4af37;
+
 /* Mixins */
 @mixin helvetica-thin {
   font: {
@@ -38,6 +41,31 @@ img {
   width: 100%;
 }
 
+/* Buttons */
+button {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 2px solid $gold;
+  font-family: "Bebas Neue";
+  font-size: 1em;
+  padding: 15px 20px;
+  letter-spacing: 1.15px;
+  outline: none;
+  transition: all 175ms;
+}
+
+button:hover {
+  background-color: $gold;
+  border-color: $gold / 3;
+}
+
+button:active {
+  background-color: $gold / 2;
+  border-color: $gold / 4;
+}
+
 /* Navigation */
 nav {
   overflow: auto;
@@ -57,7 +85,7 @@ nav {
   li {
     display: inline;
     font-size: 0.75em;
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   div.logo {
@@ -89,7 +117,7 @@ nav {
     @include helvetica-thin;
     color: #d4bb6c;
     letter-spacing: 1.75px;
-    padding: 60px 25px;
+    padding: 15px;
     text: {
       decoration: none;
       transform: uppercase;
