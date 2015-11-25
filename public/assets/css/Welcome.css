@@ -236,6 +236,12 @@ nav {
   nav a:active {
     color: #7b7b7b; }
 
+nav:last-of-type ul:first-of-type {
+  margin-left: 5%; }
+
+nav:last-of-type ul:last-of-type {
+  margin-right: 5%; }
+
 /* Fonts */
 @font-face {
   font-family: "Bauru";
@@ -384,6 +390,12 @@ nav {
     font-style: italic; }
   nav a:active {
     color: #7b7b7b; }
+
+nav:last-of-type ul:first-of-type {
+  margin-left: 5%; }
+
+nav:last-of-type ul:last-of-type {
+  margin-right: 5%; }
 
 /* Fonts */
 @font-face {
@@ -610,6 +622,12 @@ nav {
     font-style: italic; }
   nav a:active {
     color: #7b7b7b; }
+
+nav:last-of-type ul:first-of-type {
+  margin-left: 5%; }
+
+nav:last-of-type ul:last-of-type {
+  margin-right: 5%; }
 
 /* Fonts */
 @font-face {

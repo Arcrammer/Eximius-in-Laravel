@@ -37,12 +37,20 @@
         <li><a href="/listings">Listings</a></li>
         <li><a href="/register">Sign Up</a></li>
       </ul>
-      </ul>
     </nav>
     <div class="container">
       @yield('content')
     </div> <!-- .container -->
-
+    <nav>
+      <ul>
+        <li><a href="/">Welcome</a></li>
+        <li><a href="/what-we-do/">Our Work</a></li>
+      </ul>
+      <ul>
+        <li><a href="/listings">Listings</a></li>
+        <li><a href="/register">Sign Up</a></li>
+      </ul>
+    </nav>
     <!-- Scripts -->
     @yield('extra_scripts')
   </body>

@@ -16,7 +16,7 @@
     <button>Read More...</button>
   </div> <!-- .latest-blog-post-content -->
   <img src="assets/images/JonOttosson.jpeg" alt="JonOttosson">
-</div> <!-- .latest-blog-post -->
+</div> <!-- .banner .latest-blog-post -->
 <div class="three-panels">
   <div class="panel">
     <img src="assets/icons/StackofPapers.svg" alt="StackofPapers">
@@ -41,5 +41,5 @@
     <button>Let's do it!</button>
   </div> <!-- .content -->
   <img src="assets/images/MarkusSpiske.jpg" alt="MarkusSpiske">
-</div> <!-- .begin -->
+</div> <!-- .banner .begin -->
 @endsection
