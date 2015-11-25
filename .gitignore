@@ -1,4 +1,4 @@
-/public/assets
+/public/build/assets
 /vendor
 /node_modules
 Homestead.yaml
