@@ -18,10 +18,21 @@ elixir(function(mix) {
       'Hover.scss',
       'Welcome.scss'
     ], 'resources/assets/css/Welcome.css')
-      .styles([
-        'Reset.css',
-        'Welcome.css'
-      ], 'public/assets/css/Welcome.css');
+    .styles([
+      'Reset.css',
+      'Welcome.css'
+    ], 'public/assets/css/Welcome.css');
 
-    mix.version('assets/css/Welcome.css');
+    mix.sass([
+      'Authentication.scss'
+    ], 'resources/assets/css/Authentication.css')
+    .styles([
+      'Reset.css',
+      'Authentication.css'
+    ], 'public/assets/css/Authentication.css');
+
+    mix.version([
+      'assets/css/Welcome.css',
+      'assets/css/Authentication.css'
+    ]);
 });

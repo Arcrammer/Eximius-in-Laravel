@@ -26,17 +26,31 @@
   </head>
   <body>
     <nav>
-      <ul>
-        <li><a href="/">Welcome</a></li>
-        <li><a href="/what-we-do/">Our Work</a></li>
-      </ul>
-      <div class="logo">
-        <a href="/">Eximius</a>
-      </div> <!-- .logo -->
-      <ul>
-        <li><a href="/listings">Listings</a></li>
-        <li><a href="/register">Sign Up</a></li>
-      </ul>
+      <?php if (Auth::check()): ?>
+        <ul>
+          <li><a href="/">Welcome</a></li>
+          <li><a href="/listings/">Listings</a></li>
+        </ul>
+        <div class="logo">
+          <a href="/">Eximius</a>
+        </div> <!-- .logo -->
+        <ul>
+          <li><a href="/auth/logout">Logout</a></li>
+          <li><a href="/profile">Profile</a></li>
+        </ul>
+      <?php else: ?>
+        <ul>
+          <li><a href="/">Welcome</a></li>
+          <li><a href="/what-we-do/">Our Work</a></li>
+        </ul>
+        <div class="logo">
+          <a href="/">Eximius</a>
+        </div> <!-- .logo -->
+        <ul>
+          <li><a href="/listings">Listings</a></li>
+          <li><a href="/auth/register">Sign Up</a></li>
+        </ul>
+      <?php endif ?>
     </nav>
     <div class="container">
       @yield('content')
