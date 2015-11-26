@@ -52,7 +52,7 @@ input[type="password"] {
   margin: 15px 0;
   padding: 10px 0;
   text-align: center;
-  width: 254px;
+  width: 254px !important;
 }
 
 input[type="submit"] {
@@ -114,6 +114,7 @@ label:last-of-type {
 
 .probs {
   @include helvetica-thin;
+  color: white;
   font-size: 0.85em;
   line-height: 175%;
   letter-spacing: 0.65px;
@@ -156,5 +157,5 @@ a.under-the-form:active {
 /* Login Form */
 .login-form input[type="text"],
 .login-form input[type="password"] {
-  margin-left: 25%;
+  margin-left: 25% !important;
 }
