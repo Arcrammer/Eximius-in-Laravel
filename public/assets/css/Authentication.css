@@ -309,10 +309,10 @@ input[type="password"] {
   color: #e4e4e4;
   font-size: 1em;
   letter-spacing: 0.35px;
-  margin: 15px 0;
+  margin: 15px 0 15px 25%;
   padding: 10px 0;
   text-align: center;
-  width: 254px; }
+  width: 254px !important; }
 
 input[type="submit"] {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
@@ -402,4 +402,4 @@ a.under-the-form:active {
 /* Login Form */
 .login-form input[type="text"],
 .login-form input[type="password"] {
-  margin-left: 25%; }
+  margin-left: 25% !important; }

@@ -55,16 +55,29 @@
     <div class="container">
       @yield('content')
     </div> <!-- .container -->
-    <nav>
-      <ul>
-        <li><a href="/">Welcome</a></li>
-        <li><a href="/what-we-do/">Our Work</a></li>
-      </ul>
-      <ul>
-        <li><a href="/listings">Listings</a></li>
-        <li><a href="/register">Sign Up</a></li>
-      </ul>
-    </nav>
+    <?php if (Auth::check()): ?>
+      <nav>
+        <ul>
+          <li><a href="/">Welcome</a></li>
+          <li><a href="/listings/">Listings</a></li>
+        </ul>
+        <ul>
+          <li><a href="/auth/logout">Logout</a></li>
+          <li><a href="/profile">Profile</a></li>
+        </ul>
+      </nav>
+    <?php else: ?>
+      <nav>
+        <ul>
+          <li><a href="/">Welcome</a></li>
+          <li><a href="/what-we-do/">Our Work</a></li>
+        </ul>
+        <ul>
+          <li><a href="/listings">Listings</a></li>
+          <li><a href="/auth/register">Sign Up</a></li>
+        </ul>
+      </nav>
+    <?php endif ?>
     <!-- Scripts -->
     @yield('extra_scripts')
   </body>
