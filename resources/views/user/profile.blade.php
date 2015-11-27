@@ -1,4 +1,5 @@
 @extends('master')
+@section('title', 'Profile')
 @section('extra_stylesheets')
 <link rel="stylesheet" href="{{ elixir('assets/css/User.css') }}">
 @endsection
