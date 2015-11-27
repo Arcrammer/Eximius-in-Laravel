@@ -186,6 +186,18 @@ button:active {
   background-color: #6a581c;
   border-color: #352c0e; }
 
+button.blue {
+  border-color: #5abbe2;
+  margin: 7.5% 5%;
+  padding: 2.5% 7.5%; }
+
+button.blue:hover {
+  background-color: #5abbe2; }
+
+button.blue:active {
+  border-color: #2d5e71;
+  background-color: #244b5a; }
+
 /* Navigation */
 nav {
   overflow: auto;
@@ -340,6 +352,18 @@ button:hover {
 button:active {
   background-color: #6a581c;
   border-color: #352c0e; }
+
+button.blue {
+  border-color: #5abbe2;
+  margin: 7.5% 5%;
+  padding: 2.5% 7.5%; }
+
+button.blue:hover {
+  background-color: #5abbe2; }
+
+button.blue:active {
+  border-color: #2d5e71;
+  background-color: #244b5a; }
 
 /* Navigation */
 nav {
@@ -572,6 +596,18 @@ button:hover {
 button:active {
   background-color: #6a581c;
   border-color: #352c0e; }
+
+button.blue {
+  border-color: #5abbe2;
+  margin: 7.5% 5%;
+  padding: 2.5% 7.5%; }
+
+button.blue:hover {
+  background-color: #5abbe2; }
+
+button.blue:active {
+  border-color: #2d5e71;
+  background-color: #244b5a; }
 
 /* Navigation */
 nav {

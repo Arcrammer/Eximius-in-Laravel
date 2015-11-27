@@ -6,8 +6,11 @@
   Advanced Server-Side Languages
   Created Tuesday, 24 Nov. 2015
 --}}
-@extends('welcome.master')
+@extends('master')
 @section('title', 'Home')
+@section('extra_stylesheets')
+<link rel="stylesheet" href="{{ elixir('assets/css/Welcome.css') }}">
+@endsection
 @section('content')
 <div class="banner latest-blog-post">
   <div class="content">

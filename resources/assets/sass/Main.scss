@@ -15,6 +15,7 @@ $bebas-stack: "Bebas Neue", $helvetica-stack;
 /* Colours */
 $white: #e4e4e4;
 $gold: #d4af37;
+$blue: #5abbe2;
 
 /* Mixins */
 @mixin helvetica-thin {
@@ -81,6 +82,21 @@ button:hover {
 button:active {
   background-color: $gold / 2;
   border-color: $gold / 4;
+}
+
+button.blue {
+  border-color: $blue;
+  margin: 7.5% 5%;
+  padding: 2.5% 7.5%;
+}
+
+button.blue:hover {
+  background-color: $blue;
+}
+
+button.blue:active {
+  border-color: $blue / 2;
+  background-color: $blue / 2.5;
 }
 
 /* Navigation */

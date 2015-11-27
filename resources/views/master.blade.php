@@ -4,7 +4,7 @@
   Eximius
   Alexander Rhett Crammer
   Advanced Server-Side Languages
-  Created Tuesday, 24 Nov. 2015
+  Created Friday, 27 Nov. 2015
 --}}
 <!DOCTYPE html>
 <html>
@@ -21,7 +21,6 @@
       <meta name="keywords" content="Jobs, Careers, Professional">
 
       <!-- Stylesheets -->
-      <link href="{{ elixir('assets/css/Welcome.css') }}" rel="stylesheet">
       @yield('extra_stylesheets')
   </head>
   <body>

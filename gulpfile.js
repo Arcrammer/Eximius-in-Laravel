@@ -31,8 +31,18 @@ elixir(function(mix) {
       'Authentication.css'
     ], 'public/assets/css/Authentication.css');
 
+    mix.sass([
+      'Main.scss',
+      'User.scss'
+    ], 'resources/assets/css/User.css')
+    .styles([
+      'Reset.css',
+      'User.css'
+    ], 'public/assets/css/User.css');
+
     mix.version([
       'assets/css/Welcome.css',
-      'assets/css/Authentication.css'
+      'assets/css/Authentication.css',
+      'assets/css/User.css'
     ]);
 });
