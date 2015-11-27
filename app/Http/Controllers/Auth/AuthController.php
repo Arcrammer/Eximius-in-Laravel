@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Validator;
+use Input;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -60,19 +61,35 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+        // Save the image uploaded to the filesystem
+        if (Input::hasFile('selfie')) {
+          // The user has uploaded a selfie; Save
+          // it to the servers' filesystem
+          $extension = Input::file('selfie')->getClientOriginalExtension();
+          $persistedFilename = md5(uniqid(rand(), true)) . '.' . $extension;
+          $persistedPath = base_path() . '/public/assets/images/selfies/';
+          Input::file('selfie')->move($persistedPath, $persistedFilename);
+
+          // Tell the database the filename
+          $data += array('selfie_filename' => $persistedFilename);
+        } else {
+          // The user has not uploaded a
+          // selfie; Tell the database
+          $data['selfie_filename'] = NULL;
+        }
+
+        // If checkboxes aren't ticked their values
+        // aren't sent with the POST data, so we'll
+        // set their values here before sending them
+        // to the database.
+        //
         (isset($data['is_employer'])) ? $data['is_employer'] = 1 : $data['is_employer'] = 0;
         (isset($data['is_seeker'])) ? $data['is_seeker'] = 1 : $data['is_seeker'] = 0;
-        \Log::debug([
-            'username' => $data['username'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-            'is_employer' => $data['is_employer'],
-            'is_seeker' => $data['is_seeker']
-        ]);
         return User::create([
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'selfie_filename' => $data['selfie_filename'],
             'is_employer' => $data['is_employer'],
             'is_seeker' => $data['is_seeker']
         ]);

@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('password', 60);
             $table->boolean('is_employer');
             $table->boolean('is_seeker');
+            $table->string('selfie_filename')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

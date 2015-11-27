@@ -28,7 +28,7 @@ body {
 }
 
 /* Selfie */
-input[name="selfie"] {
+input#selfie {
   display: none;
 }
 
@@ -39,10 +39,6 @@ input[name="selfie"] {
   height: 224px;
   overflow: hidden;
   width: 224px;
-}
-
-.selfie {
-  margin-top: -25%;
 }
 
 /* Form */

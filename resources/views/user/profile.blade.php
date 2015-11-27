@@ -6,11 +6,10 @@
 @section('content')
 <form method="POST" enctype="multipart/form-data">
   {!! csrf_field() !!}
-  <input type="file" name="selfie">
+  <input type="file" name="selfie" id="selfie">
   <div class="selfie-container">
-     @if ($user->selfie !== NULL || TRUE)
-     <!-- <img src="assets/images/selfies/{{ $user->selfie }}" alt="{{ $user->selfie }}" name="selfie"> -->
-     <img class="selfie" name="selfie" src="assets/images/selfies/Me.jpg" alt="Me.jpg">
+     @if ($user->selfie_filename !== NULL)
+     <img src="assets/images/selfies/{{ $user->selfie_filename }}" alt="{{ $user->selfie_filename }}" name="selfie">
     @else
       <img class="selfie" name="selfie" src="assets/images/selfies/None.png" alt="None">
     @endif

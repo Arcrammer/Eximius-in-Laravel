@@ -177,7 +177,8 @@ input#username {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="file"] {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 200;
   background-color: transparent;

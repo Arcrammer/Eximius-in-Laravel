@@ -12,9 +12,13 @@ class User extends Controller
 {
   public function profile()
   {
-    $viewData = [
-      'user' => Auth::user()
-    ];
-    return view('user.profile', $viewData);
+    if (Auth::id()) {
+      $viewData = [
+        'user' => Auth::user()
+      ];
+      return view('user.profile', $viewData);
+    } else {
+      return redirect('/');
+    }
   }
 }
