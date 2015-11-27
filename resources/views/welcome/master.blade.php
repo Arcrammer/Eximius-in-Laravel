@@ -29,7 +29,11 @@
       <?php if (Auth::check()): ?>
         <ul>
           <li><a href="/">Welcome</a></li>
-          <li><a href="/listings/">Listings</a></li>
+          <?php if (Auth::user()->is_employer): ?>
+            <li><a href="/listings/">Employer</a></li>
+          <?php else: ?>
+            <li><a href="/listings/">Listings</a></li>
+          <?php endif ?>
         </ul>
         <div class="logo">
           <a href="/">Eximius</a>
