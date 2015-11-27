@@ -296,6 +296,12 @@ nav:last-of-type ul:last-of-type {
  * and add them to the filesystem so...)
  */
 /* Structure */
+body {
+  background-image: url("/assets/images/WayneBishop.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .container {
   margin: 5% 12.5%;
   overflow: auto;
@@ -346,5 +352,6 @@ input[type="email"] {
   width: 60%; }
 
 input[type="file"] {
+  color: white;
   margin: 5% 10%;
   width: 70%; }

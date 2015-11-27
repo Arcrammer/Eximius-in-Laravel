@@ -12,6 +12,15 @@
 @import 'Main';
 
 /* Structure */
+body {
+  background: {
+    image: url('/assets/images/WayneBishop.jpg');
+    position: center center;
+    repeat: no-repeat;
+    size: cover;
+  }
+}
+
 .container {
   margin: 5% 12.5%;
   overflow: auto;
@@ -70,6 +79,7 @@ input[type="email"] {
 }
 
 input[type="file"] {
+  color: white;
   margin: 5% 10%;
   width: 70%;
 }
