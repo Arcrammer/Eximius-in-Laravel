@@ -20,3 +20,4 @@ Route::controllers([
 // Everything else
 Route::get('/', 'Welcome@index');
 Route::get('/profile', 'User@profile');
+Route::post('/profile', 'User@update');
