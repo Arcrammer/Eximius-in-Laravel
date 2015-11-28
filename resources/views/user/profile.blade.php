@@ -3,13 +3,20 @@
 @section('extra_stylesheets')
 <link rel="stylesheet" href="{{ elixir('assets/css/User.css') }}">
 @endsection
+@section('needs_jquery', true)
+@section('extra_scripts')
+<script src="{{ elixir('assets/js/User.js') }}"></script>
+@endsection
 @section('content')
 <form method="POST" enctype="multipart/form-data">
   {!! csrf_field() !!}
   <input type="file" name="selfie" id="selfie">
   <div class="selfie-container">
      @if ($user->selfie_filename !== NULL)
-     <img src="assets/images/selfies/{{ $user->selfie_filename }}" alt="{{ $user->selfie_filename }}" name="selfie">
+       <div class="selfie-plus">
+         <p>+</p>
+       </div> <!-- .selfie-plus -->
+       <img src="assets/images/selfies/{{ $user->selfie_filename }}" alt="{{ $user->selfie_filename }}" name="selfie" class="selfie">
     @else
       <img class="selfie" name="selfie" src="assets/images/selfies/None.png" alt="None">
     @endif

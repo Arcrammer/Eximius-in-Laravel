@@ -13,6 +13,8 @@ elixir.config.sourcemaps = false;
  */
 
 elixir(function(mix) {
+    /* Stylesheets */
+    // Welcome
     mix.sass([
       'Main.scss',
       'Hover.scss',
@@ -23,6 +25,7 @@ elixir(function(mix) {
       'Welcome.css'
     ], 'public/assets/css/Welcome.css');
 
+    // Authentication
     mix.sass([
       'Authentication.scss'
     ], 'resources/assets/css/Authentication.css')
@@ -31,6 +34,7 @@ elixir(function(mix) {
       'Authentication.css'
     ], 'public/assets/css/Authentication.css');
 
+    // User
     mix.sass([
       'Main.scss',
       'User.scss'
@@ -40,9 +44,14 @@ elixir(function(mix) {
       'User.css'
     ], 'public/assets/css/User.css');
 
+    /* Scripts */
+    // User
+    mix.coffee('User.coffee', 'public/assets/js/User.js');
+
     mix.version([
       'assets/css/Welcome.css',
       'assets/css/Authentication.css',
-      'assets/css/User.css'
+      'assets/css/User.css',
+      'assets/js/User.js'
     ]);
 });
