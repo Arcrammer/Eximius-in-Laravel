@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Eximius\Events;
 
 abstract class Event
 {

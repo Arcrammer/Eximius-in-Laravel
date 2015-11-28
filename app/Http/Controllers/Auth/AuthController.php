@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Eximius\Http\Controllers\Auth;
 
-use App\User;
+use Eximius\User;
 use Validator;
 use Input;
-use App\Http\Controllers\Controller;
+use Eximius\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

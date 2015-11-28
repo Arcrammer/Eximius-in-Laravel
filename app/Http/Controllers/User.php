@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Eximius\Http\Controllers;
 
 use Auth;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use Eximius\Http\Requests;
+use Eximius\Http\Controllers\Controller;
 use Input;
 
 class User extends Controller

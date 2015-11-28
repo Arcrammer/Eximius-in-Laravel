@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: Eximius
+        psr4_prefix: Eximius
         src_path: app
