@@ -37,6 +37,7 @@ elixir(function(mix) {
     // User
     mix.sass([
       'Main.scss',
+      'Hover.scss',
       'User.scss'
     ], 'resources/assets/css/User.css')
     .styles([
@@ -47,6 +48,7 @@ elixir(function(mix) {
     // Listings
     mix.sass([
       'Main.scss',
+      'Hover.scss',
       'Listings.scss'
     ], 'resources/assets/css/Listings.css')
     .styles([
