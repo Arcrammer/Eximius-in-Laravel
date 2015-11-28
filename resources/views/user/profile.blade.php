@@ -10,12 +10,12 @@
 @section('content')
 <form method="POST" enctype="multipart/form-data">
   {!! csrf_field() !!}
-  <input type="file" name="selfie" id="selfie">
+  <input type="file" name="selfie" id="selfie" accept="image/*">
   <div class="selfie-container">
+    <div class="selfie-plus">
+      <p>+</p>
+    </div> <!-- .selfie-plus -->
      @if ($user->selfie_filename !== NULL)
-       <div class="selfie-plus">
-         <p>+</p>
-       </div> <!-- .selfie-plus -->
        <img src="assets/images/selfies/{{ $user->selfie_filename }}" alt="{{ $user->selfie_filename }}" name="selfie" class="selfie">
     @else
       <img class="selfie" name="selfie" src="assets/images/selfies/None.png" alt="None">
@@ -29,7 +29,13 @@
     <input type="email" name="email" id="email" value="{{ $user->email }}">
     <br />
     <label for="cv">R&eacute;sum&eacute;:</label>
-    <input type="file" name="cv" id="cv">
+    <input type="file" name="cv" id="cv" accept="application/pdf">
+    <br />
+    <label class="tiny-label" for="is_employer">I'm an employer:</label>
+    <input type="checkbox" name="is_employer" id="is_employer" {{ ($user->is_employer != 0) ? 'checked' : '' }}>
+    <br />
+    <label class="tiny-label" for="is_seeker">I'm looking for jobs:</label>
+    <input type="checkbox" name="is_seeker" id="is_seeker" {{ ($user->is_seeker != 0) ? 'checked' : '' }}>
     <br />
     <button class="blue">Save</button>
   </div> <!-- .field-container -->

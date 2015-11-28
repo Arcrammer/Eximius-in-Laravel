@@ -43,11 +43,33 @@ class User extends Controller
       $extension = Input::file('selfie')->getClientOriginalExtension();
       $persistedFilename = md5(uniqid(rand(), true)) . '.' . $extension;
       $persistedPath = base_path() . '/public/assets/images/selfies/';
-      Input::file('selfie')->move($persistedPath, $persistedFilename);
+      $moved = Input::file('selfie')->move($persistedPath, $persistedFilename);
+
+      // Delete the old one
+      if ($moved && isset($user->selfie_filename)) {
+        unlink(base_path() . '/public/assets/images/selfies/' . $user->selfie_filename);
+      }
 
       // Tell the database the filename
-      $user['selfie_filename'] = $persistedFilename;
+      $user->selfie_filename = $persistedFilename;
     }
+    if (Input::hasFile('cv')) {
+      // The user has uploaded their résumé; Save it
+      $extension = Input::file('cv')->getClientOriginalExtension();
+      $persistedFilename = md5(uniqid(rand(), true)) . '.' . $extension;
+      $persistedPath = base_path() . '/public/assets/résumés/';
+      $moved = Input::file('cv')->move($persistedPath, $persistedFilename);
+
+      // Delete the old one
+      if ($moved && isset($user->résumé_filename)) {
+        unlink(base_path() . '/public/assets/résumés/' . $user->résumé_filename);
+      }
+
+      // Tell the database the filename
+      $user->résumé_filename = $persistedFilename;
+    }
+    ($request->has('is_employer')) ? $user->is_employer = 1 : $user->is_employer = 0;
+    ($request->has('is_seeker')) ? $user->is_seeker = 1 : $user->is_seeker = 0;
     $user->save();
     return redirect('/profile');
   }

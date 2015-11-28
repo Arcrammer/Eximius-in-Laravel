@@ -75,7 +75,26 @@ class AuthController extends Controller
         } else {
           // The user has not uploaded a
           // selfie; Tell the database
-          $data['selfie_filename'] = NULL;
+          $data += array('selfie_filename' => NULL);
+        }
+
+        // Save the PDF uploaded to the filesystem
+        if (Input::hasFile('résumé')) {
+          // The user has uploaded their résumé; Save it
+
+          // The user has uploaded a selfie; Save
+          // it to the servers' filesystem
+          $extension = Input::file('résumé')->getClientOriginalExtension();
+          $persistedFilename = md5(uniqid(rand(), true)) . '.' . $extension;
+          $persistedPath = base_path() . '/public/assets/résumés/';
+          Input::file('résumé')->move($persistedPath, $persistedFilename);
+
+          // Tell the database the filename
+          $data += array('résumé_filename' => $persistedFilename);
+        } else {
+          // The user has not uploaded a
+          // résumé; Tell the database
+          $data += array('résumé_filename' => NULL);
         }
 
         // If checkboxes aren't ticked their values

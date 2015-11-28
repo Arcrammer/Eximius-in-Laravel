@@ -59,6 +59,13 @@ label {
   margin: 2.5% 5% 0;
 }
 
+.tiny-label {
+  display: inline;
+  font-size: 0.9em;
+  line-height: 300%;
+  margin: 2.5% 0 0 5%;
+}
+
 input[type="text"],
 input[type="email"] {
   @include helvetica-thin;
@@ -76,7 +83,7 @@ input[type="email"] {
 
 input[type="file"] {
   color: white;
-  margin: 5% 10%;
+  margin: 5% 10% 7.5%;
   width: 70%;
 }
 
