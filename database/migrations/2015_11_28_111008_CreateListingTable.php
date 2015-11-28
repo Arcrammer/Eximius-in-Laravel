@@ -14,9 +14,9 @@ class CreateListingTable extends Migration
     {
         Schema::create('listings', function (Blueprint $table) {
           $table->increments('id');
+          $table->string('location');
           $table->string('title');
           $table->string('body_filename');
-          $table->string('location');
           $table->timestamps();
         });
     }
