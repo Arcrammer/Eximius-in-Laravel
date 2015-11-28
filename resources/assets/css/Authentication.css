@@ -46,8 +46,6 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   border: 2px solid #d4af37;
-  font-family: "Bebas Neue";
-  font-size: 1em;
   padding: 15px 20px;
   letter-spacing: 1.15px;
   outline: none;
@@ -128,6 +126,13 @@ nav:last-of-type ul:first-of-type {
 
 nav:last-of-type ul:last-of-type {
   margin-right: 5%; }
+
+/* Links */
+a:link,
+a:link,
+a:link,
+a:link {
+  text-decoration: none; }
 
 /* Fonts */
 @font-face {

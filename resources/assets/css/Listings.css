@@ -1,138 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
 /**
  * Main.scss
  *
@@ -283,13 +148,13 @@ a:link {
  */
 
 /**
- * User.scss
+ * Listings.scss
  *
  * Eximius
  * Alexander Rhett Crammer
  * Advanced Server-Side Languages
  * Full Sail University
- * Created Friday, 27 Nov. 2015
+ * Created Friday, 28 Nov. 2015
  */
 /* Extend 'Main.scss' */
 /**
@@ -441,114 +306,60 @@ a:link {
  * and add them to the filesystem so...)
  */
 /* Structure */
-body {
-  background-image: url("/assets/images/WayneBishop.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
 .container {
-  margin: 5% 12.5%;
-  overflow: auto;
-  width: 75%; }
+  margin: 5% auto;
+  width: 85%; }
 
-/* Selfie */
-input#selfie {
-  display: none; }
-
-.selfie-container {
-  border: 3.5px solid #313131;
-  border-radius: 100%;
-  float: left;
-  height: 224px;
-  overflow: hidden;
-  width: 224px; }
-
-/* Form */
-form {
-  overflow: hidden; }
-
-.field-container {
-  margin-left: 40%;
-  width: 70%; }
-
-label {
+/* Listings */
+.listing {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 200;
-  color: white;
-  display: block;
-  font-size: 1.35em;
-  font-weight: 100;
-  letter-spacing: 1px;
-  margin: 2.5% 5% 0; }
-
-.tiny-label {
-  display: inline;
-  font-size: 0.9em;
-  line-height: 300%;
-  margin: 2.5% 0 0 5%; }
-
-input[type="text"],
-input[type="email"] {
-  font-family: "Helvetica Neue", "Helvetica", sans-serif;
-  font-weight: 200;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #d4af37;
   color: #e4e4e4;
-  font-size: 1em;
-  letter-spacing: 0.65px;
-  padding: 2.5% 5%;
-  margin: 2.5% 5%;
-  width: 60%; }
+  letter-spacing: 0.5px;
+  line-height: 150%;
+  margin: 5% auto; }
+  .listing h4 {
+    font-family: "Bebas Neue";
+    font-size: 1em;
+    font-weight: 500;
+    font-size: 2.75em;
+    text-transform: uppercase;
+    letter-spacing: 1.75px;
+    margin-bottom: 2.5%; }
+  .listing h6 {
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 1.35px;
+    margin: 10px 0 5px;
+    text-transform: uppercase; }
+  .listing p {
+    font-size: 0.925em;
+    padding: 4px 2.5px;
+    width: 75%; }
+    .listing p b {
+      font-weight: 600; }
+  .listing li {
+    line-height: 135%; }
+  .listing button {
+    margin-top: 2.5%;
+    margin-left: 0.5%; }
 
-input[type="file"] {
-  color: white;
-  margin: 5% 10% 7.5%;
-  width: 70%; }
+.listing:first-of-type {
+  margin-top: 7.5%; }
 
-/* Profile View */
-.selfie.higher {
-  border-radius: 100%;
-  position: relative;
-  top: -100%;
-  z-index: -1; }
-
-.selfie-plus {
-  cursor: pointer;
-  display: none; }
-
-.selfie-plus-hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
-  display: block;
-  height: 100%;
-  width: 100%;
-  float: left; }
-
-.selfie-plus-hover.darker {
-  background-color: rgba(215, 215, 215, 0.9); }
-
-.selfie-plus-hover p {
-  color: #313131;
-  cursor: pointer;
-  font-weight: 900;
-  font-size: 10em;
-  text-align: center;
-  margin-top: 10%; }
-
-.selfie-plus-hover::-moz-selection,
-.selfie-plus-hover p::-moz-selection {
-  background-color: transparent; }
-
-.selfie-plus-hover::selection,
-.selfie-plus-hover p::selection {
-  background-color: transparent; }
-
-.selfie-plus-hover::moz-selection,
-.selfie-plus-hover p::moz-selection {
-  background-color: transparent; }
-
-.selfie-plus-hover::webkit-selection,
-.selfie-plus-hover p::webkit-selection {
-  background-color: transparent; }
+/* Chronologic Buttons and Links */
+.chronologic-buttons {
+  text-align: center; }
+  .chronologic-buttons a:not(.button):link,
+  .chronologic-buttons a:not(.button):visited {
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 200;
+    color: #e4e4e4;
+    display: inline-block;
+    padding: 2.5%; }
+  .chronologic-buttons a:not(.button):hover {
+    color: #ffdb45; }
+  .chronologic-buttons a:not(.button):active {
+    color: #d4af37; }
+  .chronologic-buttons button {
+    margin: 0 2.5%; }

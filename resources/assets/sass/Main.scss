@@ -18,6 +18,14 @@ $gold: #d4af37;
 $blue: #5abbe2;
 
 /* Mixins */
+@mixin bebas-neue {
+  font: {
+    family: "Bebas Neue";
+    size: 1em;
+    weight: 500;
+  }
+}
+
 @mixin helvetica-thin {
   font: {
     family: $helvetica-stack;
@@ -66,8 +74,6 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   border: 2px solid $gold;
-  font-family: "Bebas Neue";
-  font-size: 1em;
   padding: 15px 20px;
   letter-spacing: 1.15px;
   outline: none;
@@ -176,6 +182,14 @@ nav:last-of-type {
   ul:last-of-type {
     margin-right: 5%;
   }
+}
+
+/* Links */
+a:link,
+a:link,
+a:link,
+a:link {
+  text-decoration: none;
 }
 
 /* Fonts */

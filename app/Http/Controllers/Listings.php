@@ -14,6 +14,7 @@ class Listings extends Controller
    * Show all of the listings
    */
   public function all() {
-    return Listing::all();
+    $viewData['listings'] = Listing::paginate(15);
+    return view('listings.all', $viewData);
   }
 }

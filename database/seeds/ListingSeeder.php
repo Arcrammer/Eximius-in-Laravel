@@ -45,7 +45,8 @@ class ListingSeeder extends Seeder
       'a PHP Developer',
       'a Python Engineer'
     ];
-    for ($i=0; $i <= 100; $i++) {
+    for ($i=0; $i < 100; $i++) {
+      // Add it to the array
       array_push($listings, [
         'title' => $possibleTitleIntros[array_rand($possibleTitleIntros)] . ' ' . $possiblePositions[array_rand($possiblePositions)],
         'body_filename' => md5(uniqid(rand(), true)) . '.html',
@@ -53,6 +54,11 @@ class ListingSeeder extends Seeder
         'created_at' => date('Y-m-d H:i:s'),
         'updated_at' => date('Y-m-d H:i:s')
       ]);
+
+      // Write descriptions to each of them from 'ListingBodies.php'
+      $bodyDocument = fopen(base_path().'/public/assets/listing_bodies/'.$listings[$i]['body_filename'], 'w+');
+      fwrite($bodyDocument, file_get_contents(base_path().'/database/seeds/ListingBodies.php'));
+      fclose($bodyDocument);
     }
     DB::table('listings')->insert($listings);
   }

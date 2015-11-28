@@ -44,14 +44,28 @@ elixir(function(mix) {
       'User.css'
     ], 'public/assets/css/User.css');
 
+    // Listings
+    mix.sass([
+      'Main.scss',
+      'Listings.scss'
+    ], 'resources/assets/css/Listings.css')
+    .styles([
+      'Reset.css',
+      'Listings.css'
+    ], 'public/assets/css/Listings.css');
+
     /* Scripts */
     // User
     mix.coffee('User.coffee', 'public/assets/js/User.js');
 
     mix.version([
+      // Stylesheets
       'assets/css/Welcome.css',
       'assets/css/Authentication.css',
       'assets/css/User.css',
+      'assets/css/Listings.css',
+
+      // Scripts
       'assets/js/User.js'
     ]);
 });
