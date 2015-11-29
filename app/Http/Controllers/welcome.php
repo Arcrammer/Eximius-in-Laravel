@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Eximius\Http\Requests;
 use Eximius\Http\Controllers\Controller;
 
-class welcome extends Controller
+class Welcome extends Controller
 {
   /**
    * Display a listing of the resource.

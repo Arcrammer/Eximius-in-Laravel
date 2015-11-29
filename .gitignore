@@ -6,3 +6,6 @@ Homestead.yaml
 Homestead.json
 .env
 *.log
+.vagrant
+.bash_history
+.cache
