@@ -17,7 +17,7 @@
       <meta name="application-name" content="Eximius">
       <meta name="description" content="Hand reviewed and verified employment listings.">
       <meta name="author" content="Alexander Rhett Crammer">
-      <meta name="generator" content="Atom, Ruby on Rails, GitHub, Puma, Mac OS X">
+      <meta name="generator" content="Atom, Laravel, Laravel Homestead, GitHub, Mac OS X">
       <meta name="keywords" content="Jobs, Careers, Professional">
 
       <!-- Stylesheets -->
@@ -28,8 +28,8 @@
       <?php if (Auth::check()): ?>
         <ul>
           <li><a href="/">Welcome</a></li>
-          <?php if (Auth::user()->is_employer): ?>
-            <li><a href="/listings/">Employer</a></li>
+          <?php if (Auth::user()->is_employer && isset($isAllListingsPage)): ?>
+            <li><a href="/listings/create">Post a Listing</a></li>
           <?php else: ?>
             <li><a href="/listings/">Listings</a></li>
           <?php endif ?>
@@ -60,25 +60,29 @@
     </div> <!-- .container -->
     <?php if (Auth::check()): ?>
       <nav>
-        <ul>
-          <li><a href="/">Welcome</a></li>
-          <li><a href="/listings/">Listings</a></li>
-        </ul>
-        <ul>
-          <li><a href="/auth/logout">Logout</a></li>
-          <li><a href="/profile">Profile</a></li>
-        </ul>
-      </nav>
-    <?php else: ?>
-      <nav>
-        <ul>
-          <li><a href="/">Welcome</a></li>
-          <li><a href="/what-we-do/">Our Work</a></li>
-        </ul>
-        <ul>
-          <li><a href="/listings">Listings</a></li>
-          <li><a href="/auth/register">Sign Up</a></li>
-        </ul>
+        <?php if (Auth::check()): ?>
+          <ul>
+            <li><a href="/">Welcome</a></li>
+            <?php if (Auth::user()->is_employer && isset($isAllListingsPage)): ?>
+              <li><a href="/listings/create">Post a Listing</a></li>
+            <?php else: ?>
+              <li><a href="/listings/">Listings</a></li>
+            <?php endif ?>
+          </ul>
+          <ul>
+            <li><a href="/auth/logout">Logout</a></li>
+            <li><a href="/profile">Profile</a></li>
+          </ul>
+        <?php else: ?>
+          <ul>
+            <li><a href="/">Welcome</a></li>
+            <li><a href="/what-we-do/">Our Work</a></li>
+          </ul>
+          <ul>
+            <li><a href="/listings">Listings</a></li>
+            <li><a href="/auth/register">Sign Up</a></li>
+          </ul>
+        <?php endif ?>
       </nav>
     <?php endif ?>
     <!-- Scripts -->

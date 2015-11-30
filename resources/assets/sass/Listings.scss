@@ -31,7 +31,16 @@
     font-size: 2.75em;
     text-transform: uppercase;
     letter-spacing: 1.75px;
+    line-height: 115%;
     margin-bottom: 2.5%;
+  }
+
+  h5 {
+    @extend h4;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    margin-top: -0.75%;
+    margin-bottom: 1.75%;
   }
 
   h6 {
@@ -59,6 +68,7 @@
   }
 
   button {
+    display: block;
     margin-top: 2.5%;
     margin-left: 0.5%;
   }
@@ -66,6 +76,66 @@
 
 .listing:first-of-type {
   margin-top: 7.5%;
+}
+
+/* Creating Listings */
+.listing-creation-form {
+  margin: auto;
+  width: 50%;
+
+  .probs {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  p.prob:last-of-type {
+    margin-bottom: 7.5%;
+  }
+
+  h4 {
+    @include helvetica-thin;
+    color: white;
+    font: {
+      weight: 100;
+      size: 1.25em;
+    }
+    letter-spacing: 1.5px;
+    margin-bottom: 6.5%;
+  }
+
+  input[type="text"],
+  textarea {
+    padding: 5% 0;
+    margin: 2.5% 0;
+    resize: vertical;
+    text-indent: 7.5%;
+    transition: all 225ms;
+    width: 100%;
+  }
+
+  input[type="text"]:hover,
+  textarea:hover {
+    background-color: rgba(255, 255, 255, 0.125);
+  }
+
+  input[type="text"]:focus,
+  textarea:focus {
+    background-color: rgba(255, 255, 255, 0.125);
+    outline: 2px solid $gold / 2;
+  }
+
+  textarea {
+    line-height: 150%;
+    padding: 7.5%;
+    text-indent: 0;
+    width: 85%;
+  }
+
+  button {
+    margin: 7.5%;
+    margin-left: 26%;
+    width: 50%;
+  }
 }
 
 /* Chronologic Buttons and Links */

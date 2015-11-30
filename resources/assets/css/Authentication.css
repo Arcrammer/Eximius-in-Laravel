@@ -46,6 +46,8 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   border: 2px solid #d4af37;
+  font-family: "Bebas Neue";
+  font-size: 1em;
   padding: 15px 20px;
   letter-spacing: 1.15px;
   outline: none;
@@ -133,6 +135,67 @@ a:link,
 a:link,
 a:link {
   text-decoration: none; }
+
+/* Form */
+form {
+  overflow: hidden; }
+
+.field-container {
+  margin-left: 40%;
+  width: 70%; }
+
+label {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  color: white;
+  display: block;
+  font-size: 1.35em;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin: 2.5% 5% 0; }
+
+.tiny-label {
+  display: inline;
+  font-size: 0.9em;
+  line-height: 300%;
+  margin: 2.5% 0 0 5%; }
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #d4af37;
+  color: #e4e4e4;
+  font-size: 1em;
+  letter-spacing: 0.65px;
+  padding: 2.5% 5%;
+  margin: 2.5% 5%;
+  width: 60%; }
+
+input[type="file"] {
+  color: white;
+  margin: 5% 10% 7.5%;
+  width: 70%; }
+
+/* Invalid input */
+.probs {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  color: white;
+  font-size: 0.85em;
+  line-height: 175%;
+  letter-spacing: 0.65px;
+  margin-top: 25px;
+  text-align: center; }
+
+.probs p {
+  border-bottom: 1px solid #d4af37;
+  margin: 15px auto;
+  margin-left: 10%;
+  width: 80%; }
 
 /* Fonts */
 @font-face {
@@ -242,32 +305,6 @@ label {
 
 .last-checkbox-label {
   margin-bottom: 15px; }
-
-/* Invalid input */
-.field_with_errors {
-  /**
-   * When validation failes
-   * Rails likes to put the
-   * relevant nodes in divs
-   * with this class.
-   */
-  display: inline; }
-
-.probs {
-  font-family: "Helvetica Neue", "Helvetica", sans-serif;
-  font-weight: 200;
-  color: white;
-  font-size: 0.85em;
-  line-height: 175%;
-  letter-spacing: 0.65px;
-  margin-top: 25px;
-  text-align: center; }
-
-.probs p {
-  border-bottom: 2px solid #d4af37;
-  margin: 5px auto;
-  margin-left: 10%;
-  width: 80%; }
 
 /* Login Link */
 a.under-the-form:link,

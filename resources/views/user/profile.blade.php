@@ -8,6 +8,9 @@
 <script src="{{ elixir('assets/js/User.js') }}"></script>
 @endsection
 @section('content')
+@if (session('needsEmployerStatus'))
+<p class="problem">You need to be an employer to do that.</p>
+@endif
 <form method="POST" enctype="multipart/form-data">
   {!! csrf_field() !!}
   <input type="file" name="selfie" id="selfie" accept="image/*">

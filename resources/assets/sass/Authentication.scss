@@ -111,34 +111,6 @@ label {
   margin-bottom: 15px;
 }
 
-/* Invalid input */
-.field_with_errors {
-  /**
-   * When validation failes
-   * Rails likes to put the
-   * relevant nodes in divs
-   * with this class.
-   */
-  display: inline;
-}
-
-.probs {
-  @include helvetica-thin;
-  color: white;
-  font-size: 0.85em;
-  line-height: 175%;
-  letter-spacing: 0.65px;
-  margin-top: 25px;
-  text-align: center;
-}
-
-.probs p {
-  border-bottom: 2px solid $gold;
-  margin: 5px auto;
-  margin-left: 10%;
-  width: 80%;;
-}
-
 /* Login Link */
 a.under-the-form:link,
 a.under-the-form:visited {

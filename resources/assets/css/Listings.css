@@ -36,6 +36,8 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   border: 2px solid #d4af37;
+  font-family: "Bebas Neue";
+  font-size: 1em;
   padding: 15px 20px;
   letter-spacing: 1.15px;
   outline: none;
@@ -123,6 +125,67 @@ a:link,
 a:link,
 a:link {
   text-decoration: none; }
+
+/* Form */
+form {
+  overflow: hidden; }
+
+.field-container {
+  margin-left: 40%;
+  width: 70%; }
+
+label {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  color: white;
+  display: block;
+  font-size: 1.35em;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin: 2.5% 5% 0; }
+
+.tiny-label {
+  display: inline;
+  font-size: 0.9em;
+  line-height: 300%;
+  margin: 2.5% 0 0 5%; }
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #d4af37;
+  color: #e4e4e4;
+  font-size: 1em;
+  letter-spacing: 0.65px;
+  padding: 2.5% 5%;
+  margin: 2.5% 5%;
+  width: 60%; }
+
+input[type="file"] {
+  color: white;
+  margin: 5% 10% 7.5%;
+  width: 70%; }
+
+/* Invalid input */
+.probs {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  color: white;
+  font-size: 0.85em;
+  line-height: 175%;
+  letter-spacing: 0.65px;
+  margin-top: 25px;
+  text-align: center; }
+
+.probs p {
+  border-bottom: 1px solid #d4af37;
+  margin: 15px auto;
+  margin-left: 10%;
+  width: 80%; }
 
 /* Fonts */
 @font-face {
@@ -208,6 +271,8 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   border: 2px solid #d4af37;
+  font-family: "Bebas Neue";
+  font-size: 1em;
   padding: 15px 20px;
   letter-spacing: 1.15px;
   outline: none;
@@ -295,6 +360,67 @@ a:link,
 a:link,
 a:link {
   text-decoration: none; }
+
+/* Form */
+form {
+  overflow: hidden; }
+
+.field-container {
+  margin-left: 40%;
+  width: 70%; }
+
+label {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  color: white;
+  display: block;
+  font-size: 1.35em;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin: 2.5% 5% 0; }
+
+.tiny-label {
+  display: inline;
+  font-size: 0.9em;
+  line-height: 300%;
+  margin: 2.5% 0 0 5%; }
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #d4af37;
+  color: #e4e4e4;
+  font-size: 1em;
+  letter-spacing: 0.65px;
+  padding: 2.5% 5%;
+  margin: 2.5% 5%;
+  width: 60%; }
+
+input[type="file"] {
+  color: white;
+  margin: 5% 10% 7.5%;
+  width: 70%; }
+
+/* Invalid input */
+.probs {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  color: white;
+  font-size: 0.85em;
+  line-height: 175%;
+  letter-spacing: 0.65px;
+  margin-top: 25px;
+  text-align: center; }
+
+.probs p {
+  border-bottom: 1px solid #d4af37;
+  margin: 15px auto;
+  margin-left: 10%;
+  width: 80%; }
 
 /* Fonts */
 @font-face {
@@ -457,6 +583,8 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   border: 2px solid #d4af37;
+  font-family: "Bebas Neue";
+  font-size: 1em;
   padding: 15px 20px;
   letter-spacing: 1.15px;
   outline: none;
@@ -545,6 +673,67 @@ a:link,
 a:link {
   text-decoration: none; }
 
+/* Form */
+form {
+  overflow: hidden; }
+
+.field-container {
+  margin-left: 40%;
+  width: 70%; }
+
+label {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  color: white;
+  display: block;
+  font-size: 1.35em;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin: 2.5% 5% 0; }
+
+.tiny-label {
+  display: inline;
+  font-size: 0.9em;
+  line-height: 300%;
+  margin: 2.5% 0 0 5%; }
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #d4af37;
+  color: #e4e4e4;
+  font-size: 1em;
+  letter-spacing: 0.65px;
+  padding: 2.5% 5%;
+  margin: 2.5% 5%;
+  width: 60%; }
+
+input[type="file"] {
+  color: white;
+  margin: 5% 10% 7.5%;
+  width: 70%; }
+
+/* Invalid input */
+.probs {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  color: white;
+  font-size: 0.85em;
+  line-height: 175%;
+  letter-spacing: 0.65px;
+  margin-top: 25px;
+  text-align: center; }
+
+.probs p {
+  border-bottom: 1px solid #d4af37;
+  margin: 15px auto;
+  margin-left: 10%;
+  width: 80%; }
+
 /* Fonts */
 @font-face {
   font-family: "Bauru";
@@ -580,14 +769,20 @@ a:link {
   letter-spacing: 0.5px;
   line-height: 150%;
   margin: 5% auto; }
-  .listing h4 {
+  .listing h4, .listing h5 {
     font-family: "Bebas Neue";
     font-size: 1em;
     font-weight: 500;
     font-size: 2.75em;
     text-transform: uppercase;
     letter-spacing: 1.75px;
+    line-height: 115%;
     margin-bottom: 2.5%; }
+  .listing h5 {
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    margin-top: -0.75%;
+    margin-bottom: 1.75%; }
   .listing h6 {
     font-size: 0.9em;
     font-weight: 600;
@@ -603,11 +798,54 @@ a:link {
   .listing li {
     line-height: 135%; }
   .listing button {
+    display: block;
     margin-top: 2.5%;
     margin-left: 0.5%; }
 
 .listing:first-of-type {
   margin-top: 7.5%; }
+
+/* Creating Listings */
+.listing-creation-form {
+  margin: auto;
+  width: 50%; }
+  .listing-creation-form .probs {
+    margin-top: 0;
+    margin-bottom: 50px; }
+  .listing-creation-form p.prob:last-of-type {
+    margin-bottom: 7.5%; }
+  .listing-creation-form h4, .listing-creation-form .listing h5, .listing .listing-creation-form h5 {
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 200;
+    color: white;
+    font-weight: 100;
+    font-size: 1.25em;
+    letter-spacing: 1.5px;
+    margin-bottom: 6.5%; }
+  .listing-creation-form input[type="text"],
+  .listing-creation-form textarea {
+    padding: 5% 0;
+    margin: 2.5% 0;
+    resize: vertical;
+    text-indent: 7.5%;
+    transition: all 225ms;
+    width: 100%; }
+  .listing-creation-form input[type="text"]:hover,
+  .listing-creation-form textarea:hover {
+    background-color: rgba(255, 255, 255, 0.125); }
+  .listing-creation-form input[type="text"]:focus,
+  .listing-creation-form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.125);
+    outline: 2px solid #6a581c; }
+  .listing-creation-form textarea {
+    line-height: 150%;
+    padding: 7.5%;
+    text-indent: 0;
+    width: 85%; }
+  .listing-creation-form button {
+    margin: 7.5%;
+    margin-left: 26%;
+    width: 50%; }
 
 /* Chronologic Buttons and Links */
 .chronologic-buttons {

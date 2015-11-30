@@ -11,6 +11,7 @@
   @endif
   {!! csrf_field() !!}
   <input type="text" name="username" id="username" placeholder="Username" value="{{ old('username') }}">
+  <input type="text" name="business_name" id="business_name" placeholder="Business Name (Optional)" value="{{ old('business_name') }}">
   <input type="email" name="email" id="email_address" placeholder="Email" value="{{ old('email') }}">
   <input type="password" name="password" id="password" placeholder="Password">
   <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Again">

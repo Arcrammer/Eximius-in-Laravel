@@ -13,16 +13,6 @@ class ListingSeeder extends Seeder
   public function run()
   {
     $listings = [];
-    $possibleLocations = [
-      'Chelsea, Manhattan',
-      'Williamsburg, Brooklyn',
-      'SoHo, Manhattan',
-      'Upper East Side, Manhattan',
-      'Red Hook, Brooklyn',
-      'Kips Bay, Manhattan',
-      'Astoria, Queens',
-      'Midtown, Manhattan'
-    ];
     $possibleTitleIntros = [
       'Urgent Need of',
       'Start-up Looking for',
@@ -45,11 +35,38 @@ class ListingSeeder extends Seeder
       'a PHP Developer',
       'a Python Engineer'
     ];
+    $possibleBusinessNames = [
+      'T5 Labs',
+      'Expa',
+      'The New York Times',
+      'Wall Street Journal',
+      'Meetup',
+      'Amazon, Inc.',
+      'Blue Apron',
+      'Audible, Inc.',
+      'Condé Nast',
+      'Shutterfly',
+      'Adobe',
+      'Smith & Keller',
+      'TIME Magazine',
+      'Grid'
+    ];
+    $possibleLocations = [
+      'Chelsea, Manhattan',
+      'Williamsburg, Brooklyn',
+      'SoHo, Manhattan',
+      'Upper East Side, Manhattan',
+      'Red Hook, Brooklyn',
+      'Kips Bay, Manhattan',
+      'Astoria, Queens',
+      'Midtown, Manhattan'
+    ];
     for ($i=0; $i < 100; $i++) {
       // Add it to the array
       array_push($listings, [
         'title' => $possibleTitleIntros[array_rand($possibleTitleIntros)] . ' ' . $possiblePositions[array_rand($possiblePositions)],
         'body_filename' => md5(uniqid(rand(), true)) . '.html',
+        'business' => rand(1, count($possibleBusinessNames)),
         'location' => $possibleLocations[array_rand($possibleLocations)],
         'created_at' => date('Y-m-d H:i:s'),
         'updated_at' => date('Y-m-d H:i:s')

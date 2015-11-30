@@ -7,6 +7,7 @@
   @foreach($listings as $listing)
     <div class="listing">
       <h4>{{ $listing->title }}</h4>
+      <h5>{{ \Carbon\Carbon::createFromTimeStamp(strtotime($listing->created_at))->diffForHumans() }} in {{ $listing->location }} at {{ $listing->business }}</h5>
       {!! file_get_contents(base_path().'/public/assets/listing_bodies/'.$listing->body_filename) !!}
       @if(Auth::id())
       <a href="/apply-to/{{ $listing->id }}">
@@ -25,9 +26,11 @@
         <button>Earlier</button>
       </a>
     @endif
-    @for($i=1; $i < 11; $i++)
-      <a href="{{ $listings->url($i) }}">{{ $i }}</a>
-    @endfor
+    @if ($listings->count() > 2)
+      @for($i=1; $i < 11; $i++)
+        <a href="{{ $listings->url($i) }}">{{ $i }}</a>
+      @endfor
+    @endif
     @if($listings->hasMorePages())
       <a href="{{ $listings->nextPageUrl() }}" class="button">
         <button>Older</button>

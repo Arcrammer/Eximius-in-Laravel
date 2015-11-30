@@ -4,23 +4,19 @@ namespace Eximius;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Listing extends Model
+class Business extends Model
 {
   /**
    * Mass assignable values
    *
    * @var array
    */
-   protected $fillable = [
-     'title',
-     'location',
-     'body_filename'
-   ];
+   protected $fillable = ['business'];
 
   /**
    * The database table used by the model.
    *
    * @var string
    */
-  protected $table = 'listings';
+  protected $table = 'businesses';
 }

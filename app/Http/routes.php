@@ -22,3 +22,5 @@ Route::get('/', 'Welcome@index');
 Route::get('/profile', 'User@profile');
 Route::post('/profile', 'User@update');
 Route::get('/listings', 'Listings@all');
+Route::get('/listings/create', 'Listings@create');
+Route::post('/listings/create', 'Listings@persist');

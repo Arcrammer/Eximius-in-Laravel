@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('password', 60);
@@ -34,5 +34,9 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::drop('users');
+        $listing_bodies = glob(base_path().'/public/assets/listing_bodies/*');
+        foreach ($listing_bodies as $listing_body) {
+          unlink($listing_body);
+        }
     }
 }

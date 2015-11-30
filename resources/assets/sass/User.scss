@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  margin: 5% 12.5%;
+  margin: 2.5% 12.5%;
   overflow: auto;
   width: 75%;
 }
@@ -41,57 +41,14 @@ input#selfie {
   width: 224px;
 }
 
-/* Form */
-form {
-  overflow: hidden;
-}
-
-.field-container {
-  margin-left: 40%;
-  width: 70%;
-}
-
-label {
-  @include helvetica-thin;
-  color: white;
-  display: block;
-  font: {
-    size: 1.35em;
-    weight: 100;
-  }
-  letter-spacing: 1px;
-  margin: 2.5% 5% 0;
-}
-
-.tiny-label {
-  display: inline;
-  font-size: 0.9em;
-  line-height: 300%;
-  margin: 2.5% 0 0 5%;
-}
-
-input[type="text"],
-input[type="email"] {
-  @include helvetica-thin;
-
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid $gold;
-  color: $white;
-  font-size: 1em;
-  letter-spacing: 0.65px;
-  padding: 2.5% 5%;
-  margin: 2.5% 5%;
-  width: 60%;
-}
-
-input[type="file"] {
-  color: white;
-  margin: 5% 10% 7.5%;
-  width: 70%;
-}
-
 /* Profile View */
+.problem {
+  @include helvetica-thin;
+  color: #7dccc9;
+  padding: 0 0 7.5%;
+  text-align: center;
+}
+
 .selfie.higher {
   border-radius: 100%;
   position: relative;
