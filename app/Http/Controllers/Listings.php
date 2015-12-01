@@ -84,7 +84,8 @@ class Listings extends Controller
     $listing = Listing::create([
       'title' => $request->input('title'),
       'location' => $request->input('location'),
-      'body_filename' => $bodyFilename
+      'body_filename' => $bodyFilename,
+      'business_id' => $businessID
     ]);
     return redirect('/listings');
   }

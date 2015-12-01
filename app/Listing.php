@@ -14,7 +14,8 @@ class Listing extends Model
    protected $fillable = [
      'title',
      'location',
-     'body_filename'
+     'body_filename',
+     'business_id'
    ];
 
   /**
