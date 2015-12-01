@@ -71,7 +71,12 @@ class ListingSeeder extends Seeder
        */
 
       // Determine a random time
-      $earliestCreationDate = date('Y-m-d H:i:s', time()) - 60 * 60 * 24 * 7 * 2;
+      /**
+       * This goes back two weeks although I said '3'
+       * I'm completely lost as to how this is
+       * possible so if you figure it out, do share
+       */
+      $earliestCreationDate =  time() - 60 * 60 * 24 * 7 * 3;
 
       // Add it to the array
       array_push($listings, [
@@ -79,8 +84,8 @@ class ListingSeeder extends Seeder
         'body_filename' => md5(uniqid(rand(), true)) . '.html',
         'business_id' => rand(1, count($possibleBusinessNames)),
         'location' => $possibleLocations[array_rand($possibleLocations)],
-        'created_at' => date('Y-m-d H:i:s', rand(time($earliestCreationDate), time())),
-        'updated_at' => date('Y-m-d H:i:s', rand(time($earliestCreationDate), time()))
+        'created_at' => date('Y-m-d H:i:s', mt_rand($earliestCreationDate, time())),
+        'updated_at' => date('Y-m-d H:i:s', mt_rand($earliestCreationDate, time()))
       ]);
 
       // Write descriptions to each of them from 'ListingBodies.php'
