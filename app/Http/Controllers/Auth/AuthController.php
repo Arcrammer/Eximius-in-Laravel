@@ -67,7 +67,7 @@ class AuthController extends Controller
           // it to the servers' filesystem
           $extension = Input::file('selfie')->getClientOriginalExtension();
           $persistedFilename = md5(uniqid(rand(), true)) . '.' . $extension;
-          $persistedPath = base_path() . '/public/assets/images/selfies/';
+          $persistedPath = base_path() . '/public/assets/selfies/';
           Input::file('selfie')->move($persistedPath, $persistedFilename);
 
           // Tell the database the filename

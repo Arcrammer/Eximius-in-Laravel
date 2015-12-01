@@ -42,12 +42,12 @@ class User extends Controller
       // The user has uploaded a new selfie; Save it
       $extension = Input::file('selfie')->getClientOriginalExtension();
       $persistedFilename = md5(uniqid(rand(), true)) . '.' . $extension;
-      $persistedPath = base_path() . '/public/assets/images/selfies/';
+      $persistedPath = base_path() . '/public/assets/selfies/';
       $moved = Input::file('selfie')->move($persistedPath, $persistedFilename);
 
       // Delete the old one
       if ($moved && isset($user->selfie_filename)) {
-        unlink(base_path() . '/public/assets/images/selfies/' . $user->selfie_filename);
+        unlink(base_path() . '/public/assets/selfies/' . $user->selfie_filename);
       }
 
       // Tell the database the filename

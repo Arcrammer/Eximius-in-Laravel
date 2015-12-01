@@ -19,9 +19,9 @@
       <p>+</p>
     </div> <!-- .selfie-plus -->
      @if ($user->selfie_filename !== NULL)
-       <img src="assets/images/selfies/{{ $user->selfie_filename }}" alt="{{ $user->selfie_filename }}" name="selfie" class="selfie">
+       <img src="assets/selfies/{{ $user->selfie_filename }}" alt="{{ $user->selfie_filename }}" name="selfie" class="selfie">
     @else
-      <img class="selfie" name="selfie" src="assets/images/selfies/None.png" alt="None">
+      <img class="selfie" name="selfie" src="assets/selfies/None.png" alt="None">
     @endif
   </div> <!-- .selfie-container -->
   <div class="field-container">
