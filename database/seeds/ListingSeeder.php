@@ -77,6 +77,7 @@ class ListingSeeder extends Seeder
        * possible so if you figure it out, do share
        */
       $earliestCreationDate =  time() - 60 * 60 * 24 * 7 * 3;
+      $creationOfThisListing = mt_rand($earliestCreationDate, time());
 
       // Add it to the array
       array_push($listings, [
@@ -84,8 +85,8 @@ class ListingSeeder extends Seeder
         'body_filename' => md5(uniqid(rand(), true)) . '.html',
         'business_id' => rand(1, count($possibleBusinessNames)),
         'location' => $possibleLocations[array_rand($possibleLocations)],
-        'created_at' => date('Y-m-d H:i:s', mt_rand($earliestCreationDate, time())),
-        'updated_at' => date('Y-m-d H:i:s', mt_rand($earliestCreationDate, time()))
+        'created_at' => date('Y-m-d H:i:s', $creationOfThisListing),
+        'updated_at' => date('Y-m-d H:i:s', $creationOfThisListing)
       ]);
 
       // Write descriptions to each of them from 'ListingBodies.php'
