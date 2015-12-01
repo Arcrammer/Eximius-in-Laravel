@@ -14,11 +14,11 @@
   @endif
   {!! csrf_field() !!}
   <h4>Create a Listing:</h4>
-  <input type="text" placeholder="Title" name="title">
+  <input autocomplete="off" type="text" placeholder="Title" name="title">
   <br />
-  <input type="text" placeholder="Location" name="location">
+  <input autocomplete="off" type="text" placeholder="Location" name="location">
   <br />
-  <input type="text" placeholder="Business Name" name="business_name">
+  <input autocomplete="off" type="text" placeholder="Business Name" name="business_name">
   <br />
   <textarea name="listing_body" placeholder="Description" rows="16" cols="40"></textarea>
   <button>Submit for Review</button>
