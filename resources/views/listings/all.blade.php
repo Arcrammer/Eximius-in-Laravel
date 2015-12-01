@@ -27,7 +27,7 @@
       </a>
     @endif
     @if ($listings->count() > 2)
-      @for($i=1; $i < 11; $i++)
+      @for($i=1; $i < 10; $i++)
         <a href="{{ $listings->url($i) }}">{{ $i }}</a>
       @endfor
     @endif

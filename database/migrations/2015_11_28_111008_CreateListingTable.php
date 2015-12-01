@@ -14,11 +14,11 @@ class CreateListingTable extends Migration
     {
         Schema::create('listings', function (Blueprint $table) {
           $table->increments('id')->unsigned();
+          $table->string('title');
           $table->string('location');
           $table->bigInteger('business')
             ->references('id')
             ->on('businesses');
-          $table->string('title');
           $table->string('body_filename');
           $table->timestamps();
         });
