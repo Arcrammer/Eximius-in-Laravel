@@ -16,7 +16,7 @@ class CreateListingTable extends Migration
           $table->increments('id')->unsigned();
           $table->string('title');
           $table->string('location');
-          $table->bigInteger('business')
+          $table->bigInteger('business_id')
             ->references('id')
             ->on('businesses');
           $table->string('body_filename');

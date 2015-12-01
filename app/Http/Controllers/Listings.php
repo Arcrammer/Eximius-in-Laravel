@@ -20,9 +20,7 @@ class Listings extends Controller
    */
   protected function all() {
     $viewData['isAllListingsPage'] = true;
-    $viewData['listings'] = Listing::orderBy('created_at', 'desc')
-      ->join('businesses', 'listings.business', '=' ,'businesses.id')
-      ->paginate(15);
+    $viewData['listings'] = Listing::orderBy('created_at', 'desc')->paginate(15);
     return view('listings.all', $viewData);
   }
 

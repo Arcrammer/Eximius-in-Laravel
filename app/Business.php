@@ -19,4 +19,8 @@ class Business extends Model
    * @var string
    */
   protected $table = 'businesses';
+
+  public function listings() {
+    return $this->hasMany('Eximius\Listing', 'business_id');
+  }
 }

@@ -7,7 +7,7 @@
   @foreach($listings as $listing)
     <div class="listing">
       <h4>{{ $listing->title }}</h4>
-      <h5>{{ \Carbon\Carbon::createFromTimeStamp(strtotime($listing->created_at))->diffForHumans() }} in {{ $listing->location }} at {{ $listing->business }}</h5>
+      <h5>{{ \Carbon\Carbon::createFromTimeStamp(strtotime($listing->created_at))->diffForHumans() }} in {{ $listing->location }} at {{ $listing->business()->getResults()->business }}</h5>
       {!! file_get_contents(base_path().'/public/assets/listing_bodies/'.$listing->body_filename) !!}
       @if(Auth::id())
       <a href="/apply-to/{{ $listing->id }}">

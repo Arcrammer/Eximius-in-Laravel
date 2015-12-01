@@ -23,4 +23,8 @@ class Listing extends Model
    * @var string
    */
   protected $table = 'listings';
+
+  public function business() {
+    return $this->belongsTo('Eximius\Business', 'business_id');
+  }
 }

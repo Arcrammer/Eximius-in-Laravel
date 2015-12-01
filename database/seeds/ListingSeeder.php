@@ -77,7 +77,7 @@ class ListingSeeder extends Seeder
       array_push($listings, [
         'title' => $possibleTitleIntros[array_rand($possibleTitleIntros)] . ' ' . $possiblePositions[array_rand($possiblePositions)],
         'body_filename' => md5(uniqid(rand(), true)) . '.html',
-        'business' => rand(1, count($possibleBusinessNames)),
+        'business_id' => rand(1, count($possibleBusinessNames)),
         'location' => $possibleLocations[array_rand($possibleLocations)],
         'created_at' => date('Y-m-d H:i:s', rand(time($earliestCreationDate), time())),
         'updated_at' => date('Y-m-d H:i:s', rand(time($earliestCreationDate), time()))
