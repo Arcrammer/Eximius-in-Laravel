@@ -61,7 +61,7 @@ class ListingSeeder extends Seeder
       'Astoria, Queens',
       'Midtown, Manhattan'
     ];
-    for ($i=0; $i < 135; $i++) {
+    for ($i=0; $i < 1000; $i++) {
       /**
        * Laravels' pagination implementation is
        * a little busted, to say the least.
