@@ -4,6 +4,7 @@ namespace Eximius\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
 use Eximius\Http\Requests;
 use Eximius\Http\Controllers\Controller;
 
@@ -14,7 +15,7 @@ class Messages extends Controller
    *
    * @var array
    */
-  protected $viewData = [
+  protected $view_data = [
     'isMessagesPage' => true
   ];
 
@@ -24,13 +25,18 @@ class Messages extends Controller
    * @return Illuminate\Http\Response
    */
   protected function all() {
-    return view('messages.all', $this->viewData);
+    $this->view_data += [
+      'messages' => Auth::user()->messages->all()
+    ];
+    return view('messages.all', $this->view_data);
   }
 
   /**
    * Allow the user to create a message
+   *
+   * @return Illuminate\Http\Response
    */
   protected function compose() {
-    return view('messages.compose', $this->viewData);
+    return view('messages.compose', $this->view_data);
   }
 }

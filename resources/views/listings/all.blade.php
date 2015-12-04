@@ -1,11 +1,12 @@
 @extends('master')
 @section('title', 'Listings')
 @section('extra_stylesheets')
+<link href="{{ elixir('assets/css/ListView.css') }}" rel="stylesheet">
 <link href="{{ elixir('assets/css/Listings.css') }}" rel="stylesheet">
 @endsection
 @section('content')
   @foreach($listings as $listing)
-    <div class="listing">
+    <div class="list-item">
       <h4>{{ $listing->title }}</h4>
       <h5>{{ \Carbon\Carbon::createFromTimeStamp(strtotime($listing->created_at))->diffForHumans() }} in {{ $listing->location }} at {{ $listing->business()->getResults()->business }}</h5>
       {!! file_get_contents(base_path().'/public/assets/listing_bodies/'.$listing->body_filename) !!}

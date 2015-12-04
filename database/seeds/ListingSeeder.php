@@ -12,7 +12,6 @@ class ListingSeeder extends Seeder
    */
   public function run()
   {
-    $listings = [];
     $possibleTitleIntros = [
       'Urgent Need of',
       'Start-up Looking for',
@@ -61,6 +60,8 @@ class ListingSeeder extends Seeder
       'Astoria, Queens',
       'Midtown, Manhattan'
     ];
+
+    $listings = [];
     for ($i=0; $i < 1000; $i++) {
       /**
        * Laravels' pagination implementation is
@@ -71,12 +72,7 @@ class ListingSeeder extends Seeder
        */
 
       // Determine a random time
-      /**
-       * This goes back two weeks although I said '3'
-       * I'm completely lost as to how this is
-       * possible so if you figure it out, do share
-       */
-      $earliestCreationDate =  time() - 60 * 60 * 24 * 7 * 3;
+      $earliestCreationDate =  time() - 60 * 60 * 24 * 7 * 2;
       $creationOfThisListing = mt_rand($earliestCreationDate, time());
 
       // Add it to the array

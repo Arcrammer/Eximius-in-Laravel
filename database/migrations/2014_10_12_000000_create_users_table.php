@@ -34,9 +34,5 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::drop('users');
-        $listing_bodies = glob(base_path().'/public/assets/listing_bodies/*');
-        foreach ($listing_bodies as $listing_body) {
-          unlink($listing_body);
-        }
     }
 }

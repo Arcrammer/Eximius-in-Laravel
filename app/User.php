@@ -43,4 +43,13 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    /**
+     * Users have messages
+     *
+     * @return Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    protected function messages() {
+      return $this->hasMany('Eximius\Message', 'to');
+    }
 }

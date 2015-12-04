@@ -66,6 +66,9 @@ elixir(function(mix) {
       'Messages.css'
     ], 'public/assets/css/Messages.css');
 
+    // List Views
+    mix.sass('ListView.scss', 'public/assets/css/ListView.css')
+
     /* Scripts */
     // User
     mix.coffee('User.coffee', 'public/assets/js/User.js');
@@ -75,6 +78,7 @@ elixir(function(mix) {
       'assets/css/Welcome.css',
       'assets/css/Authentication.css',
       'assets/css/User.css',
+      'assets/css/ListView.css',
       'assets/css/Listings.css',
       'public/assets/css/Messages.css',
 

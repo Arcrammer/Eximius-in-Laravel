@@ -761,50 +761,6 @@ input[type="file"] {
   margin: 5% auto;
   width: 85%; }
 
-/* Listings */
-.listing {
-  font-family: "Helvetica Neue", "Helvetica", sans-serif;
-  font-weight: 200;
-  color: #e4e4e4;
-  letter-spacing: 0.5px;
-  line-height: 150%;
-  margin: 5% auto; }
-  .listing h4, .listing h5 {
-    font-family: "Bebas Neue";
-    font-size: 1em;
-    font-weight: 500;
-    font-size: 2.75em;
-    text-transform: uppercase;
-    letter-spacing: 1.75px;
-    line-height: 115%;
-    margin-bottom: 2.5%; }
-  .listing h5 {
-    font-size: 1.25em;
-    letter-spacing: 1px;
-    margin-top: -0.75%;
-    margin-bottom: 1.75%; }
-  .listing h6 {
-    font-size: 0.9em;
-    font-weight: 600;
-    letter-spacing: 1.35px;
-    margin: 10px 0 5px;
-    text-transform: uppercase; }
-  .listing p {
-    font-size: 0.925em;
-    padding: 4px 2.5px;
-    width: 75%; }
-    .listing p b {
-      font-weight: 600; }
-  .listing li {
-    line-height: 135%; }
-  .listing button {
-    display: block;
-    margin-top: 2.5%;
-    margin-left: 0.5%; }
-
-.listing:first-of-type {
-  margin-top: 7.5%; }
-
 /* Creating Listings */
 .listing-creation-form {
   margin: auto;
@@ -814,7 +770,7 @@ input[type="file"] {
     margin-bottom: 50px; }
   .listing-creation-form p.prob:last-of-type {
     margin-bottom: 7.5%; }
-  .listing-creation-form h4, .listing-creation-form .listing h5, .listing .listing-creation-form h5 {
+  .listing-creation-form h4 {
     font-family: "Helvetica Neue", "Helvetica", sans-serif;
     font-weight: 200;
     color: white;
@@ -846,20 +802,3 @@ input[type="file"] {
     margin: 7.5%;
     margin-left: 26%;
     width: 50%; }
-
-/* Chronologic Buttons and Links */
-.chronologic-buttons {
-  text-align: center; }
-  .chronologic-buttons a:not(.button):link,
-  .chronologic-buttons a:not(.button):visited {
-    font-family: "Helvetica Neue", "Helvetica", sans-serif;
-    font-weight: 200;
-    color: #e4e4e4;
-    display: inline-block;
-    padding: 2.5% 1.75%; }
-  .chronologic-buttons a:not(.button):hover {
-    color: #ffdb45; }
-  .chronologic-buttons a:not(.button):active {
-    color: #d4af37; }
-  .chronologic-buttons button {
-    margin: 0 2.5%; }

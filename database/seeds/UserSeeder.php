@@ -17,6 +17,12 @@ class UserSeeder extends Seeder
       'password' => bcrypt('secret'),
       'is_employer' => 1,
       'is_seeker' => 1
+    ], [
+      'username' => 'Arcrammer',
+      'email' => 'Arcrammer@me.com',
+      'password' => bcrypt('secret'),
+      'is_employer' => 1,
+      'is_seeker' => 1
     ]]);
   }
 }

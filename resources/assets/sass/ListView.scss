@@ -1,0 +1,99 @@
+/**
+ * ListView.scss
+ *
+ * Eximius
+ * Alexander Rhett Crammer
+ * Advanced Server-Side Languages
+ * Full Sail University
+ * Created Friday, 4 Dec. 2015
+ */
+
+/* Extend 'Main.scss' */
+@import 'Main.scss';
+
+/* Listings */
+.list-item {
+  @include helvetica-thin;
+  color: $white;
+
+  letter-spacing: 0.5px;
+  line-height: 150%;
+  margin: 5% auto;
+
+  h4 {
+    @include bebas-neue;
+    font-size: 2.75em;
+    text-transform: uppercase;
+    letter-spacing: 1.75px;
+    line-height: 115%;
+    margin-bottom: 2.5%;
+  }
+
+  h5 {
+    @extend h4;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    margin-top: -0.75%;
+    margin-bottom: 1.75%;
+  }
+
+  h6 {
+    font: {
+      size: 0.9em;
+      weight: 600;
+    }
+    letter-spacing: 1.35px;
+    margin: 10px 0 5px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 0.925em;
+    padding: 4px 2.5px;
+    width: 75%;
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  li {
+    line-height: 135%;
+  }
+
+  button {
+    display: block;
+    margin-top: 2.5%;
+    margin-left: 0.5%;
+  }
+}
+
+.list-item:first-of-type {
+  margin-top: 7.5%;
+}
+
+/* Chronologic Buttons and Links */
+.chronologic-buttons {
+  text-align: center;
+
+  a:not(.button):link,
+  a:not(.button):visited {
+    @include helvetica-thin;
+    color: $white;
+
+    display: inline-block;
+    padding: 2.5% 1.75%;
+  }
+
+  a:not(.button):hover {
+    color: $gold * 1.25;
+  }
+
+  a:not(.button):active {
+    color: $gold;
+  }
+
+  button {
+    margin: 0 2.5%;
+  }
+}

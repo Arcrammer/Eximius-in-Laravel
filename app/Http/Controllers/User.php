@@ -15,8 +15,9 @@ class User extends Controller
    * Return information about the user
    *
    * @param Illuminate\Http\Request request
+   * @return Illuminate\Http\Response
    */
-  public function profile(Request $request)
+  protected function profile(Request $request)
   {
     if (Auth::id()) {
       $viewData = [
@@ -32,8 +33,9 @@ class User extends Controller
    * Update the information of a user
    *
    * @param Illuminate\Http\Request request
+   * @return Illuminate\Http\Response
    */
-  public function update(Request $request)
+  protected function update(Request $request)
   {
     $user = Auth::user();
     $user->username = $request->input('username');

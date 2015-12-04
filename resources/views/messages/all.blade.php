@@ -7,4 +7,10 @@
 @endsection
 
 @section('content')
+  @foreach ($messages as $message)
+    <pre style="color: white">
+      From: {{ $message->sender->username }}
+      To: {{ $message->recipient->username }}
+    </pre>
+  @endforeach
 @endsection
