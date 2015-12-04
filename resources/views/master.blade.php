@@ -24,65 +24,11 @@
       @yield('extra_stylesheets')
   </head>
   <body>
-    <nav>
-      <?php if (Auth::check()): ?>
-        <ul>
-          <li><a href="/">Welcome</a></li>
-          <?php if (Auth::user()->is_employer && isset($isAllListingsPage)): ?>
-            <li><a href="/listings/create">Post a Listing</a></li>
-          <?php else: ?>
-            <li><a href="/listings/">Listings</a></li>
-          <?php endif ?>
-        </ul>
-        <div class="logo">
-          <a href="/">Eximius</a>
-        </div> <!-- .logo -->
-        <ul>
-          <li><a href="/auth/logout">Logout</a></li>
-          <li><a href="/profile">Profile</a></li>
-        </ul>
-      <?php else: ?>
-        <ul>
-          <li><a href="/">Welcome</a></li>
-          <li><a href="/what-we-do/">Our Work</a></li>
-        </ul>
-        <div class="logo">
-          <a href="/">Eximius</a>
-        </div> <!-- .logo -->
-        <ul>
-          <li><a href="/listings">Listings</a></li>
-          <li><a href="/auth/register">Sign Up</a></li>
-        </ul>
-      <?php endif ?>
-    </nav>
+    @include ('shared.navigation', ['middle' => 'logo'])
     <div class="container">
       @yield('content')
     </div> <!-- .container -->
-    <nav>
-      <?php if (Auth::check()): ?>
-        <ul>
-          <li><a href="/">Welcome</a></li>
-          <?php if (Auth::user()->is_employer && isset($isAllListingsPage)): ?>
-            <li><a href="/listings/create">Post a Listing</a></li>
-          <?php else: ?>
-            <li><a href="/listings/">Listings</a></li>
-          <?php endif ?>
-        </ul>
-        <ul>
-          <li><a href="/auth/logout">Logout</a></li>
-          <li><a href="/profile">Profile</a></li>
-        </ul>
-      <?php else: ?>
-        <ul>
-          <li><a href="/">Welcome</a></li>
-          <li><a href="/what-we-do/">Our Work</a></li>
-        </ul>
-        <ul>
-          <li><a href="/listings">Listings</a></li>
-          <li><a href="/auth/register">Sign Up</a></li>
-        </ul>
-      <?php endif ?>
-    </nav>
+    @include ('shared.navigation')
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     @yield('extra_scripts')

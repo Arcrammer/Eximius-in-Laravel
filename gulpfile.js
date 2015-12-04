@@ -56,6 +56,16 @@ elixir(function(mix) {
       'Listings.css'
     ], 'public/assets/css/Listings.css');
 
+    // Messages
+    mix.sass([
+      'Main.scss',
+      'Messages.scss'
+    ], 'resources/assets/css/Messages.css')
+    .styles([
+      'Reset.css',
+      'Messages.css'
+    ], 'public/assets/css/Messages.css');
+
     /* Scripts */
     // User
     mix.coffee('User.coffee', 'public/assets/js/User.js');
@@ -66,6 +76,7 @@ elixir(function(mix) {
       'assets/css/Authentication.css',
       'assets/css/User.css',
       'assets/css/Listings.css',
+      'public/assets/css/Messages.css',
 
       // Scripts
       'assets/js/User.js'

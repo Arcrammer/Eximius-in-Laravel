@@ -24,3 +24,5 @@ Route::post('/profile', 'User@update');
 Route::get('/listings', 'Listings@all');
 Route::get('/listings/create', 'Listings@create');
 Route::post('/listings/create', 'Listings@persist');
+Route::get('/messages', 'Messages@all');
+Route::get('/messages/compose', 'Messages@compose');
