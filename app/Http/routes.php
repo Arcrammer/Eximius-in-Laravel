@@ -33,3 +33,4 @@ Route::post('/listings/create', 'Listings@persist');
 Route::get('/messages', 'Messages@all');
 Route::get('/messages/compose', 'Messages@compose');
 Route::get('/messages/reply/{id}', 'Messages@reply');
+Route::post('/messages/reply/{id}', 'Messages@send_message');
