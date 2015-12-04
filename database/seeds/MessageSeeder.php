@@ -22,12 +22,12 @@ class MessageSeeder extends Seeder
       'Want 20% off your next order?'
     ];
 
-    // Determine a random time
-    $earliestCreationDate =  time() - 60 * 60 * 24 * 7 * 3;
-    $creationOfThisMessage = mt_rand($earliestCreationDate, time());
-
     $messages = [];
     for ($i=0; $i < 100; $i++) {
+      // Determine a random time
+      $earliestCreationDate =  time() - 60 * 60 * 24 * 4;
+      $creationOfThisMessage = mt_rand($earliestCreationDate, time());
+
       array_push($messages, [
         'from' => rand(1, 2),
         'to' => rand(1, 2),

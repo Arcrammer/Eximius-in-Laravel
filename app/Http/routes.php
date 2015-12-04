@@ -17,12 +17,19 @@ Route::controllers([
   'password' => '\Eximius\Http\Controllers\Auth\PasswordController'
 ]);
 
-// Everything else
+// Welcome
 Route::get('/', 'Welcome@index');
+
+// Profile
 Route::get('/profile', 'User@profile');
 Route::post('/profile', 'User@update');
+
+// Listings
 Route::get('/listings', 'Listings@all');
 Route::get('/listings/create', 'Listings@create');
 Route::post('/listings/create', 'Listings@persist');
+
+// Messages
 Route::get('/messages', 'Messages@all');
 Route::get('/messages/compose', 'Messages@compose');
+Route::get('/messages/reply/{id}', 'Messages@reply');

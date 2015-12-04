@@ -1,16 +1,19 @@
 @extends('master')
+
 @section('title', 'Listings » Create')
+
 @section('extra_stylesheets')
-<link href="{{ elixir('assets/css/Listings.css') }}" rel="stylesheet">
+<link href="{{ elixir('assets/css/ListView.css') }}" rel="stylesheet">
 @endsection
+
 @section('content')
-<form class="listing-creation-form" method="post">
+<form class="composition-form" method="post">
   @if ($errors)
   <div class="probs">
     @foreach ($errors->all() as $error)
       <p class="prob">{{ $error }}</p>
     @endforeach
-  </div> <!-- .login-probs -->
+  </div> <!-- .probs -->
   @endif
   {!! csrf_field() !!}
   <h4>Create a Listing:</h4>

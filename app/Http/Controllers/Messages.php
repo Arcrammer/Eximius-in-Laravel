@@ -39,4 +39,13 @@ class Messages extends Controller
   protected function compose() {
     return view('messages.compose', $this->view_data);
   }
+
+  /**
+   * Allow the user to reply to a message
+   *
+   * @return Illuminate\Http\Response
+   */
+  protected function reply($id) {
+    return view('messages.reply', $this->view_data);
+  }
 }

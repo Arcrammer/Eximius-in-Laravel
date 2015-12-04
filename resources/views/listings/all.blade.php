@@ -2,7 +2,6 @@
 @section('title', 'Listings')
 @section('extra_stylesheets')
 <link href="{{ elixir('assets/css/ListView.css') }}" rel="stylesheet">
-<link href="{{ elixir('assets/css/Listings.css') }}" rel="stylesheet">
 @endsection
 @section('content')
   @foreach($listings as $listing)
@@ -19,7 +18,7 @@
           <button>Sign Up</button>
         </a>
       @endif
-    </div> <!-- .listing -->
+    </div> <!-- .list-item -->
   @endforeach
   <div class="chronologic-buttons">
     @if($listings->previousPageUrl())

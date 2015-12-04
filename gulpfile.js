@@ -45,17 +45,6 @@ elixir(function(mix) {
       'User.css'
     ], 'public/assets/css/User.css');
 
-    // Listings
-    mix.sass([
-      'Main.scss',
-      'Hover.scss',
-      'Listings.scss'
-    ], 'resources/assets/css/Listings.css')
-    .styles([
-      'Reset.css',
-      'Listings.css'
-    ], 'public/assets/css/Listings.css');
-
     // Messages
     mix.sass([
       'Main.scss',
@@ -79,7 +68,6 @@ elixir(function(mix) {
       'assets/css/Authentication.css',
       'assets/css/User.css',
       'assets/css/ListView.css',
-      'assets/css/Listings.css',
       'public/assets/css/Messages.css',
 
       // Scripts
