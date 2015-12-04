@@ -8,8 +8,13 @@
 @endsection
 
 @section('content')
-<form class="composition-form" method="post">
-  @if ($errors)
+
+@if (isset($isReplyMessage))
+  <form class="composition-form" method="post">
+@else
+  <form class="composition-form" method="post" action="/">
+@endif
+@if ($errors)
   <div class="probs">
     @foreach ($errors->all() as $error)
       <p class="prob">{{ $error }}</p>
@@ -17,7 +22,7 @@
   </div> <!-- .probs -->
   @endif
   {!! csrf_field() !!}
-  @if (isset($message_id))
+  @if (isset($isReplyMessage))
     <h4>Reply to {{ $senders_username }}:</h4>
     <input type="hidden" name="original_message_id" value="{{ $message_id }}">
     <input autocomplete="off" type="hidden" name="to" value="{{ $senders_username }}">

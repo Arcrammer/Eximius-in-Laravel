@@ -52,10 +52,21 @@ class Messages extends Controller
    */
   protected function reply($id) {
     $original_message = Message::find($id);
+    $replyPrefixPattern = '/^(Reply:\s)*/';
+    if (preg_match($replyPrefixPattern, $original_message->subject)) {
+      // It's a reply to a reply; Remove
+      // the extra 'Reply: ' prefixes
+      $reply_subject = 'Reply: '.preg_replace($replyPrefixPattern, '', $original_message->subject);
+    } else {
+      // It's not a reply to a reply, prepend
+      // 'Reply:' for the first time
+      $reply_subject = 'Reply: '.$original_message->subject;
+    }
     $this->view_data += [
+      'isReplyMessage' => true,
       'message_id' => $id,
       'senders_username' => $original_message->sender->username,
-      'reply_subject' => 'Reply: '.$original_message->subject
+      'reply_subject' => $reply_subject
     ];
     return view('messages.compose', $this->view_data);
   }
