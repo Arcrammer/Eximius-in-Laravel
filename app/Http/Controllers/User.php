@@ -17,16 +17,29 @@ class User extends Controller
    * @param Illuminate\Http\Request request
    * @return Illuminate\Http\Response
    */
-  protected function profile(Request $request)
+  protected function edit(Request $request)
   {
     if (Auth::id()) {
       $viewData = [
         'user' => Auth::user()
       ];
-      return view('user.profile', $viewData);
+      return view('user.edit', $viewData);
     } else {
-      return redirect('/');
+      return redirect('/auth/login');
     }
+  }
+
+  /**
+   * Show information of a user
+   *
+   * @param integer $id
+   * @return Illuminate\Http\Response
+   */
+  protected function profile($id) {
+    $viewData = [
+      'user' => \Eximius\User::find($id)
+    ];
+    return view('user.profile', $viewData);
   }
 
   /**
@@ -73,6 +86,6 @@ class User extends Controller
     ($request->has('is_employer')) ? $user->is_employer = 1 : $user->is_employer = 0;
     ($request->has('is_seeker')) ? $user->is_seeker = 1 : $user->is_seeker = 0;
     $user->save();
-    return redirect('/profile');
+    return redirect('/profile/edit');
   }
 }

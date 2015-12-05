@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 
 use Auth;
 use Input;
+use Mail;
 use Eximius\Http\Requests;
 use Eximius\Http\Controllers\Controller;
 use Eximius\Message;
+use Eximius\User;
 
 class Messages extends Controller
 {
@@ -72,12 +74,37 @@ class Messages extends Controller
   }
 
   /**
-   * Send a message
+   * Send a reply message to another
+   * user and email them about it.
    *
    * @return Illuminate\Http\Response
    */
   protected function send_message() {
-    $original_message = Message::find((int) Input::get('original_message_id'));
+    if (Input::get('is_reply') !== NULL) {
+      $wasReply = true;
+
+      // It's a reply message
+      $original_message = Message::find((int) Input::get('original_message_id'));
+
+      // Get the 'id' of the user the
+      // message is in reply to
+      $to = (int) Input::get('to');
+
+      // And the username of the sender.
+      $sender = $original_message->sender->username;
+    } else {
+      $wasReply = false;
+
+      // It's a new message (i.e. not a reply)
+      $original_message = NULL;
+
+      // Get the 'id' of the user the
+      // message is being sent to
+      $to = User::where('username', '=', Input::get('to'))->first()->id;
+
+      // And the username of the sender
+      $sender = Auth::user()->username;
+    }
 
     // Save the body of the message
     // to the filesystem
@@ -89,7 +116,7 @@ class Messages extends Controller
     // Save it to the database
     $messageWasSaved = Message::create([
       'from' => Auth::id(),
-      'to' => $original_message->sender->id,
+      'to' => $to,
       'subject' => Input::get('subject'),
       'body_filename' => $bodyFilename,
       'created_at' => date('Y-m-d H:i:s', time()),
@@ -97,6 +124,21 @@ class Messages extends Controller
     ]);
 
     if ($messageWasSaved) {
+      // Notify the recipient through email
+      $mailViewData = [
+        'sender' => $sender,
+        'preview' => substr(Input::get('message_body'), 0, 200).'...',
+        'subject' => Input::get('subject')
+      ];
+
+      // Send the mail message
+      Mail::send('mail.message_received', $mailViewData, function ($message) use ($sender) {
+        $message->from('alexander2475914@gmail.com', 'Eximius');
+        $message->to(Auth::user()->email);
+        $message->subject($sender.' has sent you a message through Eximius!');
+      });
+
+      // Redirect the sender to their messages
       return redirect('/messages');
     } else {
       echo 'Your message couldn\'t be sent.';

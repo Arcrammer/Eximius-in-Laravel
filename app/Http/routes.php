@@ -21,8 +21,9 @@ Route::controllers([
 Route::get('/', 'Welcome@index');
 
 // Profile
-Route::get('/profile', 'User@profile');
-Route::post('/profile', 'User@update');
+Route::get('/profile/edit', 'User@edit');
+Route::post('/profile/edit', 'User@update');
+Route::get('/profile/{id}', 'User@profile');
 
 // Listings
 Route::get('/listings', 'Listings@all');
@@ -32,5 +33,6 @@ Route::post('/listings/create', 'Listings@persist');
 // Messages
 Route::get('/messages', 'Messages@all');
 Route::get('/messages/compose', 'Messages@compose');
+Route::post('/messages/compose', 'Messages@send_message');
 Route::get('/messages/reply/{id}', 'Messages@reply');
-Route::post('/messages/reply/{id}', 'Messages@send_message');
+Route::post('/messages/reply/{id}', 'Messages@send_reply');

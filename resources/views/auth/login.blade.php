@@ -10,9 +10,9 @@
     </div> <!-- .login-probs -->
     @endif
     {!! csrf_field() !!}
-    <input type="text" name="username" id="username" placeholder="Username" value="{{ old('username') }}">
+    <input autocomplete="off" type="text" name="username" id="username" placeholder="Username" value="{{ old('username') }}">
     <br />
-    <input type="password" name="password" placeholder="Password" id="password">
+    <input autocomplete="off" type="password" name="password" placeholder="Password" id="password">
     <input type="submit" class="button" value="Login">
   </form>
   <a href="/auth/register/" class="under-the-form">Create an Account</a>

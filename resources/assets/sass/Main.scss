@@ -14,6 +14,7 @@ $bebas-stack: "Bebas Neue", $helvetica-stack;
 
 /* Colours */
 $white: #e4e4e4;
+$light-gold: #f1d681;
 $gold: #d4af37;
 $blue: #5abbe2;
 
@@ -113,14 +114,16 @@ nav {
   text-align: center;
   width: 100%;
 
-  ul:first-of-type li {
-    float: left;
-    margin-left: 35px;
-  }
+  ul {
+    &:first-of-type li {
+      float: left;
+      margin-left: 35px;
+    }
 
-  ul:last-of-type li {
-    float: right;
-    margin-right: 35px;
+    &:last-of-type li {
+      float: right;
+      margin-right: 35px;
+    }
   }
 
   li {
@@ -178,7 +181,7 @@ nav {
 
 nav:last-of-type {
   ul:first-of-type {
-    margin-left: 5%;
+    // margin-left: 5%;
   }
 
   ul:last-of-type {
@@ -192,6 +195,19 @@ a:link,
 a:link,
 a:link {
   text-decoration: none;
+  transition: all 125ms;
+}
+
+a:link, a:visited {
+  color: $light-gold;
+}
+
+a:hover {
+  color: #ffd758;
+}
+
+a:active {
+  color: #866e23;
 }
 
 /* Form */
@@ -200,8 +216,8 @@ form {
 }
 
 .field-container {
-  margin-left: 40%;
-  width: 70%;
+  margin-left: 40% !important;
+  width: 70% !important;
 }
 
 label {
@@ -243,6 +259,20 @@ input[type="file"] {
   color: white;
   margin: 5% 10% 7.5%;
   width: 70%;
+}
+
+/* Profile Information */
+.profile-data-container {
+  @extend .field-container, input[type="text"];
+  border: 0;
+
+  label {
+    margin: 0;
+  }
+
+  p {
+    margin: 3.5% 2.5%;
+  }
 }
 
 /* Invalid input */

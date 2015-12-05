@@ -56,7 +56,11 @@ elixir(function(mix) {
     ], 'public/assets/css/Messages.css');
 
     // List Views
-    mix.sass('ListView.scss', 'public/assets/css/ListView.css')
+    mix.sass('ListView.scss', 'resources/assets/css/ListView.css')
+    .styles([
+      'Reset.css',
+      'ListView.css'
+    ], 'public/assets/css/ListView.css');
 
     /* Scripts */
     // User

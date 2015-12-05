@@ -21,7 +21,7 @@
     @endif
     <ul>
       <li><a href="/auth/logout">Logout</a></li>
-      <li><a href="/profile">Profile</a></li>
+      <li><a href="/profile/edit">Settings</a></li>
     </ul>
   @else
     <ul>

@@ -1,4 +1,14 @@
 /**
+ * ListView.scss
+ *
+ * Eximius
+ * Alexander Rhett Crammer
+ * Advanced Server-Side Languages
+ * Full Sail University
+ * Created Friday, 4 Dec. 2015
+ */
+/* Extend 'Main.scss' */
+/**
  * Main.scss
  *
  * Eximius
@@ -224,4 +234,110 @@ input[type="file"] {
  * Extra fonts (it was easy to go ahead
  * and add them to the filesystem so...)
  */
+/* Structure */
+.container {
+  margin: 5% auto;
+  width: 85%; }
 
+/* Listings */
+.list-item {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 200;
+  color: #e4e4e4;
+  letter-spacing: 0.5px;
+  line-height: 150%;
+  margin: 5% auto; }
+  .list-item h4, .list-item h5 {
+    font-family: "Bebas Neue";
+    font-size: 1em;
+    font-weight: 500;
+    font-size: 2.75em;
+    text-transform: uppercase;
+    letter-spacing: 1.75px;
+    line-height: 115%;
+    margin-bottom: 2.5%; }
+  .list-item h5 {
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    margin-top: -0.75%;
+    margin-bottom: 1.75%; }
+  .list-item h6 {
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 1.35px;
+    margin: 10px 0 5px;
+    text-transform: uppercase; }
+  .list-item p {
+    font-size: 0.925em;
+    padding: 4px 2.5px;
+    width: 75%; }
+    .list-item p b {
+      font-weight: 600; }
+  .list-item li {
+    line-height: 135%; }
+  .list-item button {
+    display: block;
+    margin-top: 2.5%;
+    margin-left: 0.5%; }
+
+.list-item:first-of-type {
+  margin-top: 7.5%; }
+
+/* Chronologic Buttons and Links */
+.chronologic-buttons {
+  text-align: center; }
+  .chronologic-buttons a:not(.button):link,
+  .chronologic-buttons a:not(.button):visited {
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 200;
+    color: #e4e4e4;
+    display: inline-block;
+    padding: 2.5% 1.75%; }
+  .chronologic-buttons a:not(.button):hover {
+    color: #ffdb45; }
+  .chronologic-buttons a:not(.button):active {
+    color: #d4af37; }
+  .chronologic-buttons button {
+    margin: 0 2.5%; }
+
+/* Creating Items */
+.composition-form {
+  margin: auto;
+  width: 50%; }
+  .composition-form .probs {
+    margin-top: 0;
+    margin-bottom: 50px; }
+  .composition-form p.prob:last-of-type {
+    margin-bottom: 7.5%; }
+  .composition-form h4, .composition-form .list-item h5, .list-item .composition-form h5 {
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 200;
+    color: white;
+    font-weight: 100;
+    font-size: 1.25em;
+    letter-spacing: 1.5px;
+    margin-bottom: 6.5%; }
+  .composition-form input[type="text"], .composition-form .profile-data-container,
+  .composition-form textarea {
+    padding: 5% 0;
+    margin: 2.5% 0;
+    resize: vertical;
+    text-indent: 7.5%;
+    transition: all 225ms;
+    width: 100%; }
+  .composition-form input[type="text"]:hover, .composition-form .profile-data-container:hover,
+  .composition-form textarea:hover {
+    background-color: rgba(255, 255, 255, 0.125); }
+  .composition-form input[type="text"]:focus, .composition-form .profile-data-container:focus,
+  .composition-form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.125);
+    outline: 2px solid #6a581c; }
+  .composition-form textarea {
+    line-height: 150%;
+    padding: 7.5%;
+    text-indent: 0;
+    width: 85%; }
+  .composition-form button {
+    margin: 7.5%;
+    margin-left: 26%;
+    width: 50%; }
