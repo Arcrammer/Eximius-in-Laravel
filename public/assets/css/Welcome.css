@@ -146,6 +146,9 @@ table {
 /* Colours */
 /* Mixins */
 /* Structure */
+html {
+  min-height: 100%; }
+
 body {
   background-color: black; }
 
@@ -396,6 +399,9 @@ input[type="file"] {
 /* Colours */
 /* Mixins */
 /* Structure */
+html {
+  min-height: 100%; }
+
 body {
   background-color: black; }
 
@@ -723,6 +729,9 @@ nav li a:link:active:before {
 /* Colours */
 /* Mixins */
 /* Structure */
+html {
+  min-height: 100%; }
+
 body {
   background-color: black; }
 

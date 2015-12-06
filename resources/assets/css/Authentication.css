@@ -21,6 +21,9 @@
 /* Colours */
 /* Mixins */
 /* Structure */
+html {
+  min-height: 100%; }
+
 body {
   background-color: black; }
 
@@ -267,15 +270,18 @@ input[type="file"] {
   background-color: transparent;
   border: 0;
   color: #e4e4e4;
-  font-size: 1em;
-  letter-spacing: 0.35px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
   margin: 15px 0 15px 25%;
-  padding: 10px 0;
+  padding: 5% 0;
   text-align: center;
   width: 254px !important; }
 
 input[type="file"] {
   margin: 0; }
+
+input[type="checkbox"] {
+  cursor: pointer; }
 
 input[type="submit"] {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
@@ -312,21 +318,26 @@ label {
 
 .file-label {
   font-size: 1em;
+  margin-top: 25px;
+  margin-right: 2.5%;
+  margin-bottom: 15px;
   margin-left: 25%;
-  margin-right: 2.5%; }
+  font-size: 1em; }
 
 .first-checkbox-label {
-  margin-top: 25px; }
+  cursor: pointer;
+  font-size: 1em; }
 
 .last-checkbox-label {
-  margin-bottom: 15px; }
+  cursor: pointer;
+  font-size: 1em; }
 
 /* Login Link */
 a.under-the-form:link,
 a.under-the-form:visited {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 200;
-  font-size: 0.75em;
+  font-size: 1.15em;
   color: #e4e4e4;
   display: block;
   letter-spacing: 0.75px;

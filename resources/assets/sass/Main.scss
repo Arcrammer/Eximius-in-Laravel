@@ -51,6 +51,10 @@ $blue: #5abbe2;
 }
 
 /* Structure */
+html {
+  min-height: 100%;
+}
+
 body {
   background-color: black;
 }
