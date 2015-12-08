@@ -43,7 +43,9 @@
   <div class="content">
     <h4>Ready to begin?</h4>
     <p>You can start at absolutely no cost. Just upload your r&eacute;sum&eacute; and we’ll help you get started.</p>
-    <button>Let's do it!</button>
+    <a href="/auth/register">
+      <button>Let's do it!</button>
+    </a>
   </div> <!-- .content -->
   <img src="assets/images/MarkusSpiske.jpg" alt="MarkusSpiske">
 </div> <!-- .banner .begin -->

@@ -23,18 +23,6 @@ class User extends Controller
   ];
 
   /**
-   * Soft delete a users' profile
-   *
-   * @return Illuminate\Http\Response
-   */
-  protected function delete() {
-    \Eximius\User::destroy(Auth::id());
-    \Eximius\Message::where('from', '=', Auth::id())->delete();
-    Auth::logout();
-    return redirect('/');
-  }
-
-  /**
    * Return information about the user
    *
    * @param Illuminate\Http\Request request
@@ -110,5 +98,17 @@ class User extends Controller
     ($request->has('is_seeker')) ? $user->is_seeker = 1 : $user->is_seeker = 0;
     $user->save();
     return redirect('/profile/edit');
+  }
+
+  /**
+   * Soft delete a users' profile
+   *
+   * @return Illuminate\Http\Response
+   */
+  protected function delete() {
+    \Eximius\User::destroy(Auth::id());
+    \Eximius\Message::where('from', '=', Auth::id())->delete();
+    Auth::logout();
+    return redirect('/');
   }
 }

@@ -81,13 +81,19 @@ button.blue {
   border-color: #5abbe2;
   margin: 7.5% 5%;
   padding: 2.5% 7.5%; }
+  button.blue:hover {
+    background-color: #5abbe2; }
+  button.blue:active {
+    border-color: #2d5e71;
+    background-color: #244b5a; }
 
-button.blue:hover {
-  background-color: #5abbe2; }
-
-button.blue:active {
-  border-color: #2d5e71;
-  background-color: #244b5a; }
+button.red {
+  border-color: #d94a4a; }
+  button.red:hover {
+    background-color: #d94a4a; }
+  button.red:active {
+    border-color: #6d2525;
+    background-color: #571e1e; }
 
 /* Navigation */
 nav {
@@ -411,13 +417,19 @@ button.blue {
   border-color: #5abbe2;
   margin: 7.5% 5%;
   padding: 2.5% 7.5%; }
+  button.blue:hover {
+    background-color: #5abbe2; }
+  button.blue:active {
+    border-color: #2d5e71;
+    background-color: #244b5a; }
 
-button.blue:hover {
-  background-color: #5abbe2; }
-
-button.blue:active {
-  border-color: #2d5e71;
-  background-color: #244b5a; }
+button.red {
+  border-color: #d94a4a; }
+  button.red:hover {
+    background-color: #d94a4a; }
+  button.red:active {
+    border-color: #6d2525;
+    background-color: #571e1e; }
 
 /* Navigation */
 nav {
