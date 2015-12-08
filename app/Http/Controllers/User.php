@@ -29,6 +29,7 @@ class User extends Controller
    */
   protected function delete() {
     \Eximius\User::destroy(Auth::id());
+    \Eximius\Message::where('from', '=', Auth::id())->delete();
     Auth::logout();
     return redirect('/');
   }

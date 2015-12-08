@@ -19,6 +19,7 @@ class CreateMessagesTable extends Migration
       $table->integer('to')->unsigned();
       $table->string('subject');
       $table->string('body_filename');
+      $table->softDeletes();
       $table->timestamps();
 
       // Foreign Keys
