@@ -1,0 +1,95 @@
+/**
+ * Blog.scss
+ *
+ * Eximius
+ * Alexander Rhett Crammer
+ * Advanced Server-Side Languages
+ * Full Sail University
+ * Created Monday, 7 Dec. 2015
+ */
+
+/* Extend 'Main.scss' */
+@import 'Main';
+
+/* Structure */
+.container {
+  margin: 0 auto;
+  overflow: auto;
+}
+
+/* Background Image */
+.list-item {
+  &:first-of-type {
+    margin-top: 15px;
+  }
+}
+
+.post {
+  cursor: pointer;
+  float: left;
+  height: 275px;
+  overflow: hidden;
+  margin: 15px;
+  padding: 2.5% 0 2.5% 2.5% !important;
+  width: 230.13033333px / 870.391px * 100%;
+
+  &:nth-of-type(3n+4) {
+    clear: both;
+  }
+
+  &:hover {
+    & h4,
+    & p {
+      color: white;
+    }
+
+    & img {
+      top: -125%;
+      left: -75%;
+      opacity: 0.25;
+      width: 260%;
+    }
+  }
+
+  h4 {
+    font-size: 2em;
+  }
+
+  h4, p {
+    float: left;
+    width: 90%;
+  }
+
+  a {
+    &:not(:last-of-type) {
+      color: $white;
+    }
+
+    &:last-of-type {
+      display: inline-block;
+      margin-top: 5%;
+      width: 100%;
+    }
+  }
+
+  img {
+    opacity: 0.25;
+    position: relative;
+    top: -110%;
+    right: 0;
+    bottom: 0;
+    left: -50%;
+    transition: all 175ms;
+    width: 225%;
+    z-index: -1;
+  }
+}
+
+img {
+  min-height: 100%;
+  opacity: 0.15;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}

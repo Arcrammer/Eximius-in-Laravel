@@ -20,9 +20,14 @@ Route::controllers([
 // Welcome
 Route::get('/', 'Welcome@index');
 
+// Blog
+Route::get('/read/{id}', 'Blog@show_post');
+Route::get('/blog', 'Blog@all');
+
 // Profile
 Route::get('/profile/edit', 'User@edit');
 Route::post('/profile/edit', 'User@update');
+Route::get('/profile/delete', 'User@delete');
 Route::get('/profile/{id}', 'User@profile');
 
 // Listings

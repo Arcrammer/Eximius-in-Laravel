@@ -18,8 +18,7 @@
     <label for="email">Email:</label>
     <p>{{ $user->email }}</p>
     <br />
-    <label for="cv">R&eacute;sum&eacute;:</label>
-    <br />
+    <label for="type">Type:</label>
     @if ($user->is_employer && $user->is_seeker)
       <p>Employer, seeker.</p>
     @elseif ($user->is_employer)

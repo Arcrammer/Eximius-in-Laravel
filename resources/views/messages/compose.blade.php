@@ -9,7 +9,7 @@
 
 @section('content')
 
-<form class="composition-form" method="post">
+<form class="composition-form" method="post" action="/messages/compose">
 @if ($errors)
   <div class="probs">
     @foreach ($errors->all() as $error)
@@ -21,7 +21,7 @@
   @if (isset($isReplyMessage))
     <h4>Reply to {{ $senders_username }}:</h4>
     <input type="hidden" name="original_message_id" value="{{ $message_id }}">
-    <input autocomplete="off" type="hidden" name="to" value="{{ $message->sender->id }}">
+    <input autocomplete="off" type="hidden" name="to" value="{{ $senders_username }}">
     <input autocomplete="off" type="text" placeholder="Subject" name="subject" value="{{ $reply_subject }}">
     <br />
   @else

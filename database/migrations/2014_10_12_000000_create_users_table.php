@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('résumé_filename')->nullable();
             $table->string('selfie_filename')->nullable();
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

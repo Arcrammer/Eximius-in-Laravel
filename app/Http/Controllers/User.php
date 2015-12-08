@@ -12,6 +12,28 @@ use Input;
 class User extends Controller
 {
   /**
+   * The attributes that should be mutated to dates.
+   *
+   * @var array
+   */
+  protected $dates = [
+    'deleted_at',
+    'created_at',
+    'updated_at'
+  ];
+
+  /**
+   * Soft delete a users' profile
+   *
+   * @return Illuminate\Http\Response
+   */
+  protected function delete() {
+    \Eximius\User::destroy(Auth::id());
+    Auth::logout();
+    return redirect('/');
+  }
+
+  /**
    * Return information about the user
    *
    * @param Illuminate\Http\Request request

@@ -16,7 +16,9 @@
   <div class="content">
     <h4>Eximius just moved to New York!</h4>
     <p>Thanks to you, Eximius has finally expanded the office to New York. Every day we help numerous people find opportunities. Thanks to people like you we were able to open an office in New York where we’re helping nearly 100 people a day.</p>
-    <button>Read More...</button>
+    <a href="/read/latest">
+      <button>Read More...</button>
+    </a>
   </div> <!-- .latest-blog-post-content -->
   <img src="assets/images/JonOttosson.jpeg" alt="JonOttosson">
 </div> <!-- .banner .latest-blog-post -->

@@ -41,6 +41,9 @@
     <input type="checkbox" name="is_seeker" id="is_seeker" {{ ($user->is_seeker != 0) ? 'checked' : '' }}>
     <br />
     <button class="blue">Save</button>
+    <a href="/profile/delete">
+      <button type="button" class="red">Delete my Profile</button>
+    </a>
   </div> <!-- .field-container -->
 </form>
 @endsection

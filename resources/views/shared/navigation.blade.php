@@ -26,7 +26,7 @@
   @else
     <ul>
       <li><a href="/">Welcome</a></li>
-      <li><a href="/what-we-do/">Our Work</a></li>
+      <li><a href="/blog/">Blog</a></li>
     </ul>
     <div class="logo">
       <a href="/">Eximius</a>

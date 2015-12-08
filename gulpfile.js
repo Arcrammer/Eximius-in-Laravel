@@ -25,6 +25,18 @@ elixir(function(mix) {
       'Welcome.css'
     ], 'public/assets/css/Welcome.css');
 
+    // Blog
+    mix.sass([
+      'Main.scss',
+      'Hover.scss',
+      'ListView.scss',
+      'Blog.scss'
+    ], 'resources/assets/css/Blog.css')
+    .styles([
+      'Reset.css',
+      'Blog.css'
+    ], 'public/assets/css/Blog.css');
+
     // Authentication
     mix.sass([
       'Authentication.scss'
@@ -73,6 +85,7 @@ elixir(function(mix) {
     mix.version([
       // Stylesheets
       'assets/css/Welcome.css',
+      'assets/css/Blog.css',
       'assets/css/Authentication.css',
       'assets/css/User.css',
       'assets/css/ListView.css',
