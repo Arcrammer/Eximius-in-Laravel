@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://eximius.dev/',
+    'url' => 'http://eximius-laravel.ullmannite.ml/',
 
     /*
     |--------------------------------------------------------------------------
